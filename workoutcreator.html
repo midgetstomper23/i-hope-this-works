@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workout Creator - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="workout-creator-container">
+            <button class="back-btn" id="backButton">← Back to Workout Builder</button>
+            
+            <header>
+                <h1>Workout Creator</h1>
+                <p>Build your 2-week workout plan on a calendar</p>
+            </header>
+            
+            <div class="workout-form">
+                <div class="form-group">
+                    <label for="workout-name">Workout Plan Name</label>
+                    <input type="text" id="workout-name" placeholder="e.g., Strength Program, Cutting Phase" />
+                </div>
+                
+                <div class="calendar-view">
+                    <div class="calendar-navigation">
+                        <button class="calendar-nav-btn" id="prevWeekBtn">←</button>
+                        <h3>Week 1</h3>
+                        <button class="calendar-nav-btn" id="nextWeekBtn">→</button>
+                    </div>
+                    
+                    <div class="calendar-grid">
+                        <div class="calendar-day-header">Mon</div>
+                        <div class="calendar-day-header">Tue</div>
+                        <div class="calendar-day-header">Wed</div>
+                        <div class="calendar-day-header">Thu</div>
+                        <div class="calendar-day-header">Fri</div>
+                        <div class="calendar-day-header">Sat</div>
+                        <div class="calendar-day-header">Sun</div>
+
+                        <!-- Calendar days will be populated by JavaScript -->
+                        <div id="calendar-days"></div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button class="action-btn" id="saveWorkoutBtn">Save Workout Plan</button>
+                    <button class="action-btn btn-secondary" id="clearFormBtn">Clear Calendar</button>
+                </div>
+            </div>
+            
+            <div class="saved-workouts">
+                <h2>Your Saved Workout Plans</h2>
+                <div class="saved-workouts-list" id="saved-workouts-list">
+                    <!-- Saved workouts will be displayed here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Day Selection Modal -->
+    <div class="modal" id="dayModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Select Day Type</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div id="day-type-options">
+                <!-- Day options will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item">
+            <i>📅</i>
+            <span>Home</span>
+        </a>
+        <a href="workoutbuilder.html" class="nav-item">
+            <i>🏋️</i>
+            <span>Workout Builder</span>
+        </a>
+        <div class="nav-item active">
+            <i>📋</i>
+            <span>Workout Creator</span>
+        </div>
+        <div class="nav-item">
+            <i>📈</i>
+            <span>Progress</span>
+        </div>
+    </div>
+
+    <script src="workoutcreator.js"></script>
+</body>
+</html>

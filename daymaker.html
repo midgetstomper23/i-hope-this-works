@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day Maker - Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="daymaker-container">
+      <button class="back-btn" id="backButton">← Back to Workout Builder</button>
+
+      <header>
+        <h1>Day Maker</h1>
+        <p>Design individual workout days with specific exercises</p>
+      </header>
+
+      <!-- Form section -->
+      <div class="day-form">
+        <div class="form-group">
+          <label for="day-name">Day Name</label>
+          <input
+            type="text"
+            id="day-name"
+            placeholder="e.g., Arm Day, Leg Day, Chest Day"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Select Icon</label>
+          <div id="icon-grid" class="icon-grid">
+            <div class="icon-option" data-icon="💪">💪</div>
+            <div class="icon-option" data-icon="🦵">🦵</div>
+            <div class="icon-option" data-icon="👕">👕</div>
+            <div class="icon-option" data-icon="🔙">🔙</div>
+            <div class="icon-option" data-icon="🤷">🤷</div>
+            <div class="icon-option" data-icon="🔁">🔁</div>
+            <div class="icon-option" data-icon="🏋️">🏋️</div>
+          </div>
+          <input type="hidden" id="day-icon" value="🏋️" />
+        </div>
+
+        <h3>Exercises</h3>
+        <div id="exercises-container">
+          <!-- Exercises will be added here dynamically -->
+        </div>
+
+        <!-- ADD THESE BUTTONS to match your JS selectors -->
+        <div class="form-actions">
+          <button id="addExerciseBtn" type="button">➕ Add Exercise</button>
+          <button id="saveDayBtn" type="button">💾 Save Day</button>
+          <button id="clearFormBtn" type="button">🧹 Clear Form</button>
+        </div>
+      </div>
+
+      <div class="saved-days">
+        <h2>Your Saved Days</h2>
+        <p>Click on a saved day to load it for editing</p>
+
+        <div class="saved-days-list" id="saved-days-list">
+          <!-- Saved days will be displayed here dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <a href="index.html" class="nav-item">
+      <i>📅</i>
+      <span>Home</span>
+    </a>
+    <a href="workoutbuilder.html" class="nav-item">
+      <i>🏋️</i>
+      <span>Workout Builder</span>
+    </a>
+    <div class="nav-item active">
+      <i>⚙️</i>
+      <span>Day Maker</span>
+    </div>
+    <div class="nav-item">
+      <i>📈</i>
+      <span>Progress</span>
+    </div>
+  </div>
+
+  <script src="daymaker.js"></script>
+</body>
+</html>

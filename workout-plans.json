@@ -1,0 +1,94 @@
+[
+  {
+    "id": "workout-1755927271221",
+    "name": "Those Who Snow",
+    "schedule": [
+      {
+        "dayOfWeek": 0,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 1,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 2,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 3,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 4,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 5,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 6,
+        "week": 1,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 0,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 1,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 2,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 3,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 4,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 5,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      },
+      {
+        "dayOfWeek": 6,
+        "week": 2,
+        "dayId": "day-1755923775301",
+        "dayName": "indian hawk tuah respect"
+      }
+    ],
+    "createdAt": "2025-08-23T05:34:31.221Z",
+    "updatedAt": "2025-08-23T05:34:31.222Z"
+  }
+]
