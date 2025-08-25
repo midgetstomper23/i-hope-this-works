@@ -120,6 +120,7 @@ function showNextWeek() {
 }
 
 // Show specific week (1 or 2)
+// Show specific week (1 or 2)
 function showWeek(weekNumber) {
     // Update UI
     weekTitle.textContent = `Week ${weekNumber} of 2`;
@@ -145,6 +146,36 @@ function showWeek(weekNumber) {
     if (currentWorkoutId) {
         loadWeekData(weekNumber);
     }
+}
+
+// Load data for a specific week
+function loadWeekData(weekNumber) {
+    const workoutPlan = workoutPlans.find(w => w.id === currentWorkoutId);
+    if (!workoutPlan) return;
+    
+    const startIndex = (weekNumber - 1) * 7;
+    const weekDays = document.querySelectorAll(`.week-${weekNumber} .calendar-day`);
+    
+    weekDays.forEach((dayElement, index) => {
+        const globalIndex = startIndex + index;
+        const daySchedule = workoutPlan.schedule[globalIndex];
+        
+        if (daySchedule) {
+            if (daySchedule.dayId) {
+                dayElement.querySelector('.day-icon').textContent = daySchedule.icon || '🏋️';
+                dayElement.querySelector('.day-name').textContent = daySchedule.dayName;
+                dayElement.classList.remove('rest-day');
+            } else {
+                dayElement.querySelector('.day-icon').textContent = '🛌';
+                dayElement.querySelector('.day-name').textContent = 'Rest Day';
+                dayElement.classList.add('rest-day');
+            }
+        } else {
+            dayElement.querySelector('.day-icon').textContent = '❓';
+            dayElement.querySelector('.day-name').textContent = 'Click to assign';
+            dayElement.classList.remove('rest-day');
+        }
+    });
 }
 
 // Handle day click

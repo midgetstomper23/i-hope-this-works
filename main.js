@@ -18,7 +18,7 @@ function createWindow() {
   win.loadFile('index.html');
   
   // Open DevTools for development (remove in production)
-  win.webContents.openDevTools();
+  //win.webContents.openDevTools();
 }
 
 // Handle reading workout data
