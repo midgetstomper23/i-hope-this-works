@@ -13,7 +13,7 @@
             
             <header>
                 <h1>Workout Creator</h1>
-                <p>Build your 2-week workout plan on a calendar</p>
+                <p>Build your 2-week workout plan one week at a time</p>
             </header>
             
             <div class="workout-form">
@@ -24,28 +24,109 @@
                 
                 <div class="calendar-view">
                     <div class="calendar-navigation">
-                        <button class="calendar-nav-btn" id="prevWeekBtn">←</button>
-                        <h3>Week 1</h3>
-                        <button class="calendar-nav-btn" id="nextWeekBtn">→</button>
+                        <button class="calendar-nav-btn" id="prevWeekBtn" disabled>← Week 1</button>
+                        <h3>Week 1 of 2</h3>
+                        <button class="calendar-nav-btn" id="nextWeekBtn">Week 2 →</button>
                     </div>
                     
-                    <div class="calendar-grid">
-    <div class="calendar-day-header">Mon</div>
-    <div class="calendar-day-header">Tue</div>
-    <div class="calendar-day-header">Wed</div>
-    <div class="calendar-day-header">Thu</div>
-    <div class="calendar-day-header">Fri</div>
-    <div class="calendar-day-header">Sat</div>
-    <div class="calendar-day-header">Sun</div>
+                    <!-- Week 1 -->
+                    <div class="calendar-grid week-1">
+                        <div class="calendar-day-header">Mon</div>
+                        <div class="calendar-day-header">Tue</div>
+                        <div class="calendar-day-header">Wed</div>
+                        <div class="calendar-day-header">Thu</div>
+                        <div class="calendar-day-header">Fri</div>
+                        <div class="calendar-day-header">Sat</div>
+                        <div class="calendar-day-header">Sun</div>
 
-    <!-- Calendar days will be populated by JavaScript -->
-    <div id="calendar-days"></div>
-</div>
+                        <div class="calendar-day" data-week="1" data-day="1">
+                            <div class="day-number">1</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="2">
+                            <div class="day-number">2</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="3">
+                            <div class="day-number">3</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="4">
+                            <div class="day-number">4</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="5">
+                            <div class="day-number">5</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="6">
+                            <div class="day-number">6</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="1" data-day="7">
+                            <div class="day-number">7</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Week 2 (hidden by default) -->
+                    <div class="calendar-grid week-2">
+                        <div class="calendar-day-header">Mon</div>
+                        <div class="calendar-day-header">Tue</div>
+                        <div class="calendar-day-header">Wed</div>
+                        <div class="calendar-day-header">Thu</div>
+                        <div class="calendar-day-header">Fri</div>
+                        <div class="calendar-day-header">Sat</div>
+                        <div class="calendar-day-header">Sun</div>
+
+                        <div class="calendar-day" data-week="2" data-day="1">
+                            <div class="day-number">8</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="2">
+                            <div class="day-number">9</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="3">
+                            <div class="day-number">10</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="4">
+                            <div class="day-number">11</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="5">
+                            <div class="day-number">12</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="6">
+                            <div class="day-number">13</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                        <div class="calendar-day" data-week="2" data-day="7">
+                            <div class="day-number">14</div>
+                            <div class="day-icon">❓</div>
+                            <div class="day-name">Click to assign</div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-actions">
                     <button class="action-btn" id="saveWorkoutBtn">Save Workout Plan</button>
-                    <button class="action-btn btn-secondary" id="clearFormBtn">Clear Calendar</button>
+                    <button class="action-btn btn-secondary" id="clearFormBtn">Clear Week</button>
                 </div>
             </div>
             
