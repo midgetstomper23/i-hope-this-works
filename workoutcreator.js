@@ -89,27 +89,17 @@ function showNextWeek() {
 }
 
 // Render the calendar
+// Render the calendar with both weeks visible
 function renderCalendar() {
-    weekTitle.textContent = `Week ${currentWeek}`;
+    weekTitle.textContent = `Week ${currentWeek} of 2`;
     calendarDays.innerHTML = '';
     
-    // Create 14 days (2 weeks)
+    // Create exactly 14 days (2 weeks)
     for (let i = 0; i < 14; i++) {
-        const dayNumber = i + 1;
-        const week = Math.floor(i / 7) + 1;
-        
-        // Only show days for the current week
-        if (week !== currentWeek) {
-            // Add empty placeholder for days not in current week
-            const emptyDay = document.createElement('div');
-            emptyDay.className = 'empty-day';
-            calendarDays.appendChild(emptyDay);
-            continue;
-        }
-        
         const dayElement = document.createElement('div');
         dayElement.className = 'calendar-day';
         dayElement.dataset.index = i;
+        dayElement.dataset.week = Math.floor(i / 7) + 1;
         
         // Check if we have a workout day for this date
         const workoutPlan = currentWorkoutId ? 
@@ -146,13 +136,31 @@ function renderCalendar() {
         }
         
         dayElement.innerHTML = `
-            <div class="calendar-day-number">${dayNumber}</div>
+            <div class="calendar-day-number">Day ${i + 1}</div>
             ${dayContent}
         `;
         
         dayElement.addEventListener('click', () => openDayModal(i));
         calendarDays.appendChild(dayElement);
     }
+    
+    // Highlight the current week
+    highlightCurrentWeek();
+}
+
+// Helper function to highlight the current week
+function highlightCurrentWeek() {
+    const allDays = document.querySelectorAll('.calendar-day');
+    allDays.forEach(day => {
+        const week = parseInt(day.dataset.week);
+        if (week === currentWeek) {
+            day.style.opacity = '1';
+            day.style.border = '2px solid #3498db';
+        } else {
+            day.style.opacity = '0.7';
+            day.style.border = '1px solid #444';
+        }
+    });
 }
 
 // Open modal to select day type

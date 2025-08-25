@@ -1,3 +1,4 @@
+/* ===== GLOBAL STYLES ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    background-color:#202020;
+    background-color: #202020;
     color: white;
     line-height: 1.6;
     padding-bottom: 70px;
@@ -16,6 +17,13 @@ body {
 .container {
     max-width: 100%;
     padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
 
 header {
@@ -167,6 +175,15 @@ h1 {
     font-size: 0.9rem;
 }
 
+.btn-secondary {
+    background-color: #444;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}
+
 /* ===== NAVIGATION BAR ===== */
 .nav-bar {
     position: fixed;
@@ -199,16 +216,8 @@ h1 {
     margin-bottom: 4px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (min-width: 768px) {
-    .container {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-}
-
 /* ===== WORKOUT BUILDER STYLES ===== */
-.workoutbuilder {
+.workoutbuilder, .workout-creator-container {
     padding: 20px;
 }
 
@@ -272,33 +281,31 @@ h1 {
 }
 
 /* ===== DAY MAKER STYLES ===== */
-.daymaker-container {
+.daymaker-container, .workoutcreator-container {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.day-form {
+.day-form, .workout-form {
     background-color: #2d2d30;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
-.day-form .form-group {
+.form-group {
     margin-bottom: 15px;
 }
 
-.day-form label {
+label {
     display: block;
     margin-bottom: 5px;
     color: #cccccc;
     font-weight: 600;
 }
 
-.day-form input, 
-.day-form select, 
-.day-form textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -337,24 +344,30 @@ h1 {
     gap: 10px;
 }
 
+@media (max-width: 768px) {
+    .exercise-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form-actions {
     display: flex;
     gap: 10px;
     margin-top: 20px;
 }
 
-.saved-days {
+.saved-days, .saved-workouts {
     margin-top: 30px;
 }
 
-.saved-days-list {
+.saved-days-list, .saved-workouts-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     margin-top: 15px;
 }
 
-.day-card {
+.day-card, .workout-plan-card {
     background-color: #2d2d30;
     border-radius: 10px;
     padding: 15px;
@@ -362,11 +375,11 @@ h1 {
     transition: transform 0.2s;
 }
 
-.day-card:hover {
+.day-card:hover, .workout-plan-card:hover {
     transform: translateY(-3px);
 }
 
-.day-card h3 {
+.day-card h3, .workout-plan-card h3 {
     color: #3498db;
     margin-bottom: 10px;
 }
@@ -382,16 +395,7 @@ h1 {
     border-left: 2px solid #3498db;
 }
 
-.btn-secondary {
-    background-color: #444;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #555;
-}
-
-/* Workout Creator Styles */
+/* ===== WORKOUT CREATOR CALENDAR ===== */
 .workoutcreator {
     background-color: #2d2d30;
     padding: 20px;
@@ -399,128 +403,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-.week-view {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.day-box {
-    background-color: #3d3d3d;
-    padding: 15px;
-    border-radius: 5px;
-    min-height: 120px;
-}
-
-.day-box h4 {
-    color: #3498db;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.rest-day {
-    background-color: #2d4d2d;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Day Actions */
-.day-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.day-actions .action-btn {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-}
-
-/* Exercise fields grid layout */
-.exercise-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-/* Responsive adjustments for exercise fields */
-@media (max-width: 768px) {
-    .exercise-fields {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Workout Creator Styles */
-.workoutcreator-container {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.week-container {
-    margin-bottom: 30px;
-}
-
-.week-container h4 {
-    color: #3498db;
-    margin-bottom: 15px;
-}
-
-.week-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.schedule-day {
-    background-color: #2d2d30;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.schedule-day h5 {
-    margin-bottom: 10px;
-    color: #3498db;
-    text-align: center;
-}
-
-.day-selector {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #444;
-    background-color: #1a1a1a;
-    color: white;
-}
-
-/* Workout Plan Cards */
-.workout-plan-card {
-    background-color: #2d2d30;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.workout-plan-card h3 {
-    color: #3498db;
-    margin-bottom: 10px;
-}
-
-.workout-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.workout-actions .action-btn {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-}
-/* Calendar-Based Workout Creator Styles */
 .calendar-view {
     margin-bottom: 30px;
 }
@@ -550,9 +432,11 @@ h1 {
     color: #ffffff;
 }
 
+/* FIXED: 7x2 Calendar Grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto repeat(2, 1fr); /* Header + 2 weeks */
     gap: 8px;
     margin-bottom: 20px;
 }
@@ -564,16 +448,24 @@ h1 {
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    grid-row: 1; /* All headers in first row */
+}
+
+/* Ensure we always have exactly 14 day cells (7×2) */
+#calendar-days {
+    display: contents; /* This makes the children part of the parent grid */
 }
 
 .calendar-day {
-    background-color: #3d3d3d;
+    min-height: 120px;
+    grid-row: auto; /* Let them flow naturally into rows 2 and 3 */
+    transition: all 0.3s ease;
+    border: 1px solid #444;
     border-radius: 8px;
     padding: 10px;
-    min-height: 100px;
     cursor: pointer;
-    transition: all 0.2s;
     position: relative;
+    background-color: #3d3d3d;
 }
 
 .calendar-day:hover {
@@ -613,13 +505,48 @@ h1 {
     color: #cccccc;
 }
 
+/* Remove empty-day styling that breaks the grid */
 .empty-day {
-    background-color: #2d2d30;
-    border-radius: 8px;
-    min-height: 100px;
+    display: none !important;
 }
 
-/* Day Type Editor */
+/* Week navigation styling improvements */
+.calendar-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.calendar-nav-btn {
+    background: #3498db;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.calendar-nav-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Highlight for current week days */
+.calendar-day.highlighted-week {
+    opacity: 1;
+    border: 2px solid #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.calendar-day.non-highlighted-week {
+    opacity: 0.6;
+    border: 1px solid #444;
+}
+
+/* ===== DAY TYPE EDITOR ===== */
 .day-type-editor {
     background-color: #2d2d30;
     padding: 20px;
@@ -658,7 +585,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Modal for day assignment */
+/* ===== MODAL STYLES ===== */
 .modal {
     display: none;
     position: fixed;
@@ -719,44 +646,7 @@ h1 {
     text-align: center;
 }
 
-/* Responsive calendar */
-@media (max-width: 768px) {
-    .calendar-grid {
-        gap: 5px;
-    }
-    
-    .calendar-day {
-        min-height: 80px;
-        padding: 5px;
-    }
-    
-    .day-icon {
-        font-size: 1.5rem;
-    }
-    
-    .day-name {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .calendar-day {
-        min-height: 70px;
-    }
-    
-    .day-icon {
-        font-size: 1.2rem;
-    }
-    
-    .day-name {
-        display: none;
-    }
-    
-    .calendar-day-number {
-        font-size: 0.7rem;
-    }
-}
-/* Icon Selector Styles */
+/* ===== ICON SELECTOR STYLES ===== */
 .icon-selector {
     width: 100%;
     padding: 10px;
@@ -773,7 +663,6 @@ h1 {
     padding: 5px;
 }
 
-/* Day Card Header with Icon */
 .day-card-header {
     display: flex;
     align-items: center;
@@ -785,7 +674,6 @@ h1 {
     margin-right: 10px;
 }
 
-/* Icon grid for selection */
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -825,55 +713,65 @@ h1 {
     color: #cccccc;
 }
 
-/* Responsive icon grid */
+/* ===== DAY ACTIONS ===== */
+.day-actions, .workout-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.day-actions .action-btn, .workout-actions .action-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    .icon-grid {
-        grid-template-columns: repeat(4, 1fr);
+    .calendar-grid {
+        gap: 5px;
     }
-}
-
-@media (max-width: 480px) {
-    .icon-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Ensure calendar grid has exactly 14 cells (7 days × 2 weeks) */
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-/* Empty day placeholders */
-.empty-day {
-    background-color: transparent;
-    border: none;
-}
-
-/* Make sure calendar days have consistent height */
-.calendar-day {
-    min-height: 120px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+    
     .calendar-day {
         min-height: 100px;
+        padding: 8px 5px;
     }
-}
-
-@media (max-width: 480px) {
-    .calendar-day {
-        min-height: 80px;
+    
+    .day-icon {
+        font-size: 1.5rem;
     }
     
     .day-name {
         font-size: 0.7rem;
     }
     
+    .icon-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-day {
+        min-height: 80px;
+        padding: 5px 3px;
+    }
+    
     .day-icon {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .day-name {
+        display: none;
+    }
+    
+    .calendar-day-number {
+        font-size: 0.7rem;
+    }
+    
+    .calendar-grid {
+        gap: 4px;
+    }
+    
+    .icon-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
