@@ -1,92 +1,78 @@
 {
-  "id": "workout-1755927271221",
-  "name": "Those Who Snow",
+  "id": "workout-1756170816965",
+  "name": "retard blast",
   "schedule": [
     {
-      "dayOfWeek": 0,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 1,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 2,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 3,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 4,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 5,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 6,
-      "week": 1,
       "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayName": "indian hawk tuah respect",
+      "icon": "🏋️"
     },
     {
-      "dayOfWeek": 0,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 1,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 2,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 3,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 4,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 5,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     },
     {
-      "dayOfWeek": 6,
-      "week": 2,
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     }
   ],
-  "createdAt": "2025-08-23T05:34:31.221Z",
-  "updatedAt": "2025-08-23T05:34:31.222Z"
+  "createdAt": "2025-08-26T01:13:36.965Z",
+  "updatedAt": "2025-08-26T01:13:45.731Z"
 }

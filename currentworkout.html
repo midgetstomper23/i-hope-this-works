@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select Current Workout - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="current-workout-page">
+    <div class="container">
+        <div class="current-workout-container">
+            <button class="back-btn" id="backButton">← Back to Workout Builder</button>
+            
+            <header>
+                <h1>Select Current Workout Plan</h1>
+                <p>Choose which workout plan to activate as your current routine</p>
+            </header>
+
+            <div class="current-workout-section">
+                <h2>Active Workout Plan</h2>
+                <div id="current-workout-display">
+                    <p class="no-workout">No workout plan selected</p>
+                </div>
+            </div>
+
+            <div class="workout-plans-list">
+                <h2>Your Workout Plans</h2>
+                <div id="workout-plans-container">
+                    <!-- Workout plans will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="currentWorkoutManager.js"></script>
+    <script src="currentworkout.js"></script>
+</body>
+</html>

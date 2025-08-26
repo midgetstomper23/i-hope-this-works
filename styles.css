@@ -110,8 +110,8 @@ h1 {
 }
 
 .current-day {
-    background-color: white;
-    color: white;
+    background-color: #9bc2e6;
+    color: black;
 }
 
 .workout-day {
@@ -126,6 +126,23 @@ h1 {
     height: 6px;
     background-color: white;
     border-radius: 50%;
+}
+
+/* ===== HOME CALENDAR PIXEL FIX ===== */
+.index-page .calendar {
+    transform: translateZ(0); /* Force GPU rendering */
+    backface-visibility: hidden; /* Fix rendering artifacts */
+}
+
+.index-page .days {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.index-page .day {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    outline: 1px solid transparent; /* Prevents anti-aliasing issues */
 }
 
 /* ===== ACTION BUTTONS ===== */
@@ -897,4 +914,125 @@ input, select, textarea {
     .workout-creator-page .container {
         max-width: 1000px;
     }
+}
+
+/* ===== CURRENT WORKOUT PAGE STYLES ===== */
+.current-workout-page .current-workout-container {
+    padding: 20px;
+}
+
+.current-workout-page .current-workout-section {
+    background-color: #2d2d30;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.current-workout-page .workout-plans-list {
+    background-color: #2d2d30;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.current-workout-page .workout-plans-list h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.current-workout-page #workout-plans-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.current-workout-page .workout-plan-card {
+    background-color: #3d3d3d;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-workout-page .workout-plan-info h3 {
+    color: #3498db;
+    margin: 0 0 8px 0;
+}
+
+.current-workout-page .workout-plan-info p {
+    margin: 4px 0;
+    color: #cccccc;
+}
+
+.current-workout-page .workout-days {
+    font-size: 0.9em;
+    color: #999 !important;
+}
+
+.current-workout-page .current-workout-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-workout-page .current-workout-info h3 {
+    color: #2ecc71; /* Green for active workout */
+    margin: 0 0 8px 0;
+}
+
+.current-workout-page .no-workout {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+.current-workout-page .no-workouts {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 40px;
+}
+
+.current-workout-page .error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+}
+
+.current-workout-page .select-workout-btn {
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+/* Style for the existing current plan section */
+.current-plan {
+    background-color: #2d2d30;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.plan-name {
+    color: #3498db;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#current-plan-name {
+    color: #2ecc71; /* Green color for the active plan name */
+    font-weight: bold;
+}
+
+#current-plan-details {
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+#change-workout-btn {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
 }

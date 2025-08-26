@@ -15,22 +15,22 @@
                 <p>Create and manage your workout plans</p>
             </header>
             
-            <button class="back-btn" onclick="goBack()">← Back to Home</button>
+            <button class="back-btn" id="backButton">← Back to Home</button>
             
             <div class="current-plan">
-                <h2 class="plan-name">Current Plan: Strength Builder v2</h2>
-                <p>Last updated: 3 days ago</p>
-                <button class="action-btn" onclick="editCurrentPlan()">Edit Current Plan</button>
+                <h2 class="plan-name">Current Plan: <span id="current-plan-name">None</span></h2>
+                <p id="current-plan-details">No workout plan selected</p>
+                <button class="action-btn" id="change-workout-btn">Change Current Workout</button>
             </div>
             
             <div class="builder-menu">
-                <div class="menu-card" onclick="window.location.href='daymaker.html'">
+                <div class="menu-card" id="day-maker-card">
                     <h2>Day Maker</h2>
                     <p>Design individual workout days with specific exercises, sets, reps, and rest periods</p>
                     <button class="action-btn">Open Day Maker</button>
                 </div>
                 
-                <div class="menu-card" onclick="window.location.href='workoutcreator.html'">
+                <div class="menu-card" id="workout-creator-card">
                     <h2>Create New Workout</h2>
                     <p>Build a complete 2-week workout plan using your designed days</p>
                     <button class="action-btn">Create New Workout</button>
@@ -40,58 +40,25 @@
         
         <!-- Navigation Bar -->
         <div class="nav-bar">
-    <a href="index.html" class="nav-item" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit;">
-        <i>📅</i>
-        <span>Home</span>
-    </a>
-    <div class="nav-item active">
-        <i>🏋️</i>
-        <span>Workout Builder</span>
+            <a href="index.html" class="nav-item">
+                <i>📅</i>
+                <span>Home</span>
+            </a>
+            <div class="nav-item active">
+                <i>🏋️</i>
+                <span>Workout Builder</span>
+            </div>
+            <div class="nav-item">
+                <i>📈</i>
+                <span>Analytics</span>
+            </div>
+            <div class="nav-item">
+                <i>⚙️</i>
+                <span>Exercises</span>
+            </div>
+        </div>
     </div>
-    <div class="nav-item">
-        <i>📈</i>
-        <span>Analytics</span>
-    </div>
-    <div class="nav-item">
-        <i>⚙️</i>
-        <span>Exercises</span>
-    </div>
-</div>
 
-    <script>
-        // Navigation functions
-        function goBack() {
-            // For Electron, we need to use a different approach
-            // Try both methods to see which works
-            try {
-                window.history.back();
-            } catch (e) {
-                window.location.href = 'index.html';
-            }
-        }
-        
-        function showDayMaker() {
-            alert("Day Maker would open here. This would be a separate page in a real app.");
-        }
-        
-        function showWorkoutCreator() {
-            alert("Workout Creator would open here. This would be a separate page in a real app.");
-        }
-        
-        function editCurrentPlan() {
-            alert("Would open current plan for editing");
-        }
-        
-        // Fix for Electron navigation issues
-        document.addEventListener('DOMContentLoaded', function() {
-            // Make all nav items with href attributes clickable
-            document.querySelectorAll('.nav-item[href]').forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = this.getAttribute('href');
-                });
-            });
-        });
-    </script>
+    <script src="workoutbuilder.js"></script>
 </body>
 </html>
