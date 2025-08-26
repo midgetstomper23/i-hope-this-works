@@ -2,26 +2,8 @@
 
 // Navigation functions
 function goBack() {
-    // Check if we're in Electron
-    if (typeof window !== 'undefined' && window.process && window.process.type) {
-        // We're in Electron - use history back or redirect to home
-        try {
-            if (window.history.length > 1) {
-                window.history.back();
-            } else {
-                window.location.href = 'index.html';
-            }
-        } catch (e) {
-            window.location.href = 'index.html';
-        }
-    } else {
-        // Regular browser environment
-        try {
-            window.history.back();
-        } catch (e) {
-            window.location.href = 'index.html';
-        }
-    }
+    // SIMPLE FIX: Always go directly to home
+    window.location.href = 'index.html';
 }
 
 function showDayMaker() {

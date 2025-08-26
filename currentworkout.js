@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const backButton = document.getElementById('backButton');
     
-    // Navigation
+    // FIXED Navigation - simple direct navigation
     if (backButton) {
         backButton.addEventListener('click', function() {
             window.location.href = 'workoutbuilder.html';
