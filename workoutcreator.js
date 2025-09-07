@@ -281,12 +281,12 @@ function clearCurrentWeek() {
 async function saveWorkout() {
     var workoutName = workoutNameInput.value.trim();
     if (!workoutName) {
-        alert("Please enter a name for your workout plan");
+        showNotification("Please enter a name for your workout plan");
         return;
     }
     
     if (!currentWorkoutId) {
-        alert("Please create a workout plan by assigning days to the calendar first");
+        showNotification("Please create a workout plan by assigning days to the calendar first");
         return;
     }
     
@@ -297,13 +297,13 @@ async function saveWorkout() {
         var result = await window.fitnessAppAPI.saveWorkoutPlans(workoutPlans);
         
         if (result.success) {
-            alert('"' + workoutName + '" saved successfully!');
+            showNotification('"' + workoutName + '" saved successfully!');
             renderSavedWorkouts();
         } else {
-            alert("Error saving workout plan: " + result.error);
+            showNotification("Error saving workout plan: " + result.error);
         }
     } catch (error) {
-        alert("Error saving workout plan: " + error.message);
+        showNotification("Error saving workout plan: " + error.message);
     }
 }
 
@@ -343,7 +343,7 @@ function renderSavedWorkouts() {
 function loadWorkout(workoutId) {
     var workout = workoutPlans.find(function(w) { return w.id === workoutId; });
     if (!workout) {
-        alert("Workout plan not found!");
+        showNotification("Workout plan not found!");
         return;
     }
     
@@ -366,12 +366,12 @@ async function deleteWorkout(workoutId) {
                     clearForm();
                 }
                 renderSavedWorkouts();
-                alert("Workout plan deleted successfully!");
+                showNotification("Workout plan deleted successfully!");
             } else {
-                alert("Error deleting workout plan: " + result.error);
+                showNotification("Error deleting workout plan: " + result.error);
             }
         } catch (error) {
-            alert("Error deleting workout plan: " + error.message);
+            showNotification("Error deleting workout plan: " + error.message);
         }
     }
 }
@@ -379,7 +379,7 @@ async function deleteWorkout(workoutId) {
 async function applyWorkout(workoutId) {
     var workout = workoutPlans.find(function(w) { return w.id === workoutId; });
     if (!workout) {
-        alert("Workout plan not found!");
+        showNotification("Workout plan not found!");
         return;
     }
     
@@ -387,12 +387,12 @@ async function applyWorkout(workoutId) {
         var result = await window.fitnessAppAPI.saveCurrentWorkout(workout);
         
         if (result.success) {
-            alert('"' + workout.name + '" is now your current workout plan!');
+            showNotification('"' + workout.name + '" is now your current workout plan!');
         } else {
-            alert("Error applying workout plan: " + result.error);
+            showNotification("Error applying workout plan: " + result.error);
         }
     } catch (error) {
-        alert("Error applying workout plan: " + error.message);
+        showNotification("Error applying workout plan: " + error.message);
     }
 }
 

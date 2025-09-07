@@ -1,40 +1,20 @@
 {
-  "id": "workout-1756170816965",
-  "name": "retard blast",
+  "id": "workout-1756609574066",
+  "name": "generic workout",
   "schedule": [
     {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
     },
     {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
     },
     {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1755923775301",
-      "dayName": "indian hawk tuah respect",
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
       "icon": "🏋️"
     },
     {
@@ -43,9 +23,34 @@
       "icon": "🛌"
     },
     {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
+      "icon": "🏋️"
+    },
+    {
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
+      "icon": "🏋️"
+    },
+    {
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
+    },
+    {
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
+      "icon": "🏋️"
+    },
+    {
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
+      "icon": "🏋️"
+    },
+    {
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
     },
     {
       "dayId": null,
@@ -53,26 +58,21 @@
       "icon": "🛌"
     },
     {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
     },
     {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
+      "dayId": "day-1756607053128",
+      "dayName": "Generic Arm Day",
+      "icon": "💪"
     },
     {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
-    },
-    {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
+      "dayId": "day-1756607190561",
+      "dayName": "Generic Leg Day",
+      "icon": "🏋️"
     }
   ],
-  "createdAt": "2025-08-26T01:13:36.965Z",
-  "updatedAt": "2025-08-26T01:13:45.731Z"
+  "createdAt": "2025-08-31T03:06:14.066Z",
+  "updatedAt": "2025-08-31T03:06:30.780Z"
 }

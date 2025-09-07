@@ -1036,3 +1036,135 @@ input, select, textarea {
     max-width: 250px;
     margin: 0 auto;
 }
+
+/* ===== ANALYTICS PAGE STYLES ===== */
+.analytics-page .analytics-container {
+    padding: 20px;
+    padding-bottom: 80px; /* Extra space for nav bar */
+}
+
+.analytics-page .analytics-step {
+    margin-bottom: 30px;
+}
+
+.analytics-page .analytics-card {
+    background-color: #2d2d30;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.analytics-page .analytics-card:hover {
+    transform: translateY(-2px);
+}
+
+.analytics-page .workout-list,
+.analytics-page .day-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.analytics-page .metrics-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.analytics-page .metrics-selector label {
+    margin-bottom: 0;
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.analytics-page .metrics-selector select {
+    width: auto;
+    min-width: 150px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.analytics-page .chart-container {
+    background-color: #2d2d30;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+.analytics-page .chart-legend {
+    background-color: #2d2d30;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.analytics-page .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.analytics-page .legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.analytics-page .no-data {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 40px;
+}
+
+.analytics-page .step-title {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* ===== NOTIFICATION SYSTEM ===== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background-color: #2ecc71;
+    border-left: 4px solid #27ae60;
+}
+
+.notification.error {
+    background-color: #e74c3c;
+    border-left: 4px solid #c0392b;
+}
+
+.notification.info {
+    background-color: #3498db;
+    border-left: 4px solid #2980b9;
+}
+
+.notification.warning {
+    background-color: #f39c12;
+    border-left: 4px solid #d35400;
+}

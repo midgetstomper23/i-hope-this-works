@@ -45,7 +45,7 @@ document.getElementById('newWorkoutBtn').addEventListener('click', () => {
 
     existing.push(workout);
     fs.writeFileSync(filePath, JSON.stringify(existing, null, 2));
-    alert('Workout saved!');
+    showNotification('Workout saved successfully!');
     form.reset();
   });
 

@@ -1,4 +1,7 @@
-// currentWorkoutManager.js - Global current workout system
+// currentWorkoutManager.js - Enhanced with global variable
+
+// Global current workout variable
+window.currentWorkout = null;
 
 class CurrentWorkoutManager {
     constructor() {
@@ -9,6 +12,8 @@ class CurrentWorkoutManager {
     async init() {
         // Load current workout from storage
         await this.loadCurrentWorkout();
+        // Update global variable
+        window.currentWorkout = this.currentWorkout;
         // Update all displays
         this.updateAllDisplays();
     }
@@ -18,19 +23,23 @@ class CurrentWorkoutManager {
             if (window.fitnessAppAPI && window.fitnessAppAPI.readCurrentWorkout) {
                 const workout = await window.fitnessAppAPI.readCurrentWorkout();
                 this.currentWorkout = workout;
+                window.currentWorkout = workout; // Update global
             } else {
                 // Fallback to localStorage for development
                 const saved = localStorage.getItem('currentWorkout');
                 this.currentWorkout = saved ? JSON.parse(saved) : null;
+                window.currentWorkout = this.currentWorkout; // Update global
             }
         } catch (error) {
             console.error('Error loading current workout:', error);
             this.currentWorkout = null;
+            window.currentWorkout = null; // Update global
         }
     }
 
     async setCurrentWorkout(workoutPlan) {
         this.currentWorkout = workoutPlan;
+        window.currentWorkout = workoutPlan; // Update global
         
         try {
             if (window.fitnessAppAPI && window.fitnessAppAPI.saveCurrentWorkout) {
@@ -39,6 +48,9 @@ class CurrentWorkoutManager {
                 // Fallback to localStorage for development
                 localStorage.setItem('currentWorkout', JSON.stringify(workoutPlan));
             }
+            
+            // Dispatch event for other parts of the app
+            this.dispatchWorkoutChangedEvent();
             
             // Update all displays across the app
             this.updateAllDisplays();
@@ -55,16 +67,26 @@ class CurrentWorkoutManager {
 
     clearCurrentWorkout() {
         this.currentWorkout = null;
+        window.currentWorkout = null; // Update global
         try {
             if (window.fitnessAppAPI && window.fitnessAppAPI.clearCurrentWorkout) {
                 window.fitnessAppAPI.clearCurrentWorkout();
             } else {
                 localStorage.removeItem('currentWorkout');
             }
+            
+            // Dispatch event for other parts of the app
+            this.dispatchWorkoutChangedEvent();
+            
             this.updateAllDisplays();
         } catch (error) {
             console.error('Error clearing current workout:', error);
         }
+    }
+
+    dispatchWorkoutChangedEvent() {
+        const event = new CustomEvent('currentWorkoutChanged');
+        window.dispatchEvent(event);
     }
 
     updateAllDisplays() {

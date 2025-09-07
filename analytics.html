@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="analytics-page">
+    <div class="container">
+        <div class="analytics-container">
+            <button class="back-btn" id="backButton">← Back to Home</button>
+            
+            <header>
+                <h1>Workout Analytics</h1>
+                <p>Track your progress and performance over time</p>
+            </header>
+
+            <!-- Step 1: Workout Selection -->
+            <div class="analytics-step" id="step1">
+                <h2 class="step-title">Select a Workout Plan</h2>
+                <div class="workout-list" id="workout-list">
+                    <p class="no-data">Loading workout plans...</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Day Selection -->
+            <div class="analytics-step" id="step2" style="display: none;">
+                <h2 class="step-title">Select a Day</h2>
+                <div class="day-list" id="day-list">
+                    <!-- Days will be populated here -->
+                </div>
+                <button class="action-btn btn-secondary" id="backToWorkouts">← Back to Workouts</button>
+            </div>
+
+            <!-- Step 3: Analytics Dashboard -->
+            <div class="analytics-step" id="step3" style="display: none;">
+                <h2 class="step-title">Exercise Progress</h2>
+                
+                <div class="metrics-selector">
+                    <label for="metric-select">Show:</label>
+                    <select id="metric-select">
+                        <option value="weight">Weight (lbs)</option>
+                        <option value="volume">Volume (lbs × reps)</option>
+                        <option value="reps">Reps</option>
+                        <option value="recovery">Recovery Time (s)</option>
+                    </select>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="progress-chart"></canvas>
+                </div>
+
+                <div class="chart-legend" id="chart-legend">
+                    <!-- Legend will be populated here -->
+                </div>
+
+                <button class="action-btn btn-secondary" id="backToDays">← Back to Days</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item">
+            <i>📅</i>
+            <span>Home</span>
+        </a>
+        <a href="workoutbuilder.html" class="nav-item">
+            <i>🏋️</i>
+            <span>Workout Builder</span>
+        </a>
+        <a href="analytics.html" class="nav-item active">
+            <i>📈</i>
+            <span>Analytics</span>
+        </a>
+        <div class="nav-item">
+            <i>⚙️</i>
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+    <script src="notifications.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

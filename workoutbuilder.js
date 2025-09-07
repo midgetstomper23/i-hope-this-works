@@ -1,4 +1,4 @@
-// workoutbuilder.js - Workout Builder page functionality
+// workoutbuilder.js - Workout Builder page functionality with dynamic current workout
 
 // Navigation functions
 function goBack() {
@@ -19,16 +19,10 @@ function updateCurrentWorkoutDisplay() {
     const planNameElement = document.getElementById('current-plan-name');
     const planDetailsElement = document.getElementById('current-plan-details');
     
-    if (window.currentWorkoutManager) {
-        const currentWorkout = window.currentWorkoutManager.getCurrentWorkout();
-        
-        if (currentWorkout) {
-            planNameElement.textContent = currentWorkout.name;
-            planDetailsElement.textContent = `${getWorkoutDayCount(currentWorkout)} workout days, ${getWorkoutDaysSummary(currentWorkout)}`;
-        } else {
-            planNameElement.textContent = 'None';
-            planDetailsElement.textContent = 'No workout plan selected';
-        }
+    // Use the global currentWorkout variable
+    if (window.currentWorkout) {
+        planNameElement.textContent = window.currentWorkout.name;
+        planDetailsElement.textContent = `${getWorkoutDayCount(window.currentWorkout)} workout days, ${getWorkoutDaysSummary(window.currentWorkout)}`;
     } else {
         planNameElement.textContent = 'None';
         planDetailsElement.textContent = 'No workout plan selected';
@@ -97,21 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initialize current workout display - wait for currentWorkoutManager to load
-    if (window.currentWorkoutManager) {
-        updateCurrentWorkoutDisplay();
-    } else {
-        // Wait for currentWorkoutManager to be available
-        const checkManager = setInterval(() => {
-            if (window.currentWorkoutManager) {
-                clearInterval(checkManager);
-                updateCurrentWorkoutDisplay();
-            }
-        }, 100);
-    }
+    // Initialize current workout display
+    updateCurrentWorkoutDisplay();
     
     // Update display when page gains focus
     window.addEventListener('focus', function() {
+        updateCurrentWorkoutDisplay();
+    });
+    
+    // Update display when current workout changes
+    window.addEventListener('currentWorkoutChanged', function() {
         updateCurrentWorkoutDisplay();
     });
     
@@ -120,10 +109,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Escape') {
             goBack();
         }
-    });
-    
-    // Listen for custom event when current workout changes
-    window.addEventListener('currentWorkoutChanged', function() {
-        updateCurrentWorkoutDisplay();
     });
 });

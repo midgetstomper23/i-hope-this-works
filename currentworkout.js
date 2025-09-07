@@ -148,6 +148,7 @@ function clearCurrentWorkout() {
     }
 }
 
+// Add this notification function to currentworkout.js
 function showNotification(message, type = 'success') {
     // Simple notification implementation
     const notification = document.createElement('div');

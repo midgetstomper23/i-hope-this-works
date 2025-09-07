@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tracker</title>
-   
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1>Fitness Tracker</h1>
@@ -54,120 +52,26 @@
     </div>
     
     <div class="nav-bar">
-    <div class="nav-item active">
-        <i>📅</i>
-        <span>Home</span>
-    </div>
-    <div class="nav-item">
-        <a href="workoutbuilder.html" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit;">
+        <a href="index.html" class="nav-item active">
+            <i>📅</i>
+            <span>Home</span>
+        </a>
+        <a href="workoutbuilder.html" class="nav-item">
             <i>🏋️</i>
             <span>Workout Builder</span>
         </a>
+        <a href="analytics.html" class="nav-item">
+            <i>📈</i>
+            <span>Analytics</span>
+        </a>
+        <div class="nav-item">
+            <i>⚙️</i>
+            <span>Exercises</span>
+        </div>
     </div>
-    <div class="nav-item">
-        <i>📈</i>
-        <span>Analytics</span>
-    </div>
-    <div class="nav-item">
-        <i>⚙️</i>
-        <span>Exercises</span>
-    </div>
-</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set current date
-            const now = new Date();
-            const options = { weekday: 'long', month: 'long', day: 'numeric' };
-            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
-            
-            // Calendar functionality
-            let currentMonth = now.getMonth();
-            let currentYear = now.getFullYear();
-            
-            const monthNames = ["January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-            ];
-            
-            function generateCalendar(month, year) {
-                const calendarDays = document.getElementById('calendarDays');
-                calendarDays.innerHTML = '';
-                
-                document.getElementById('currentMonthYear').textContent = `${monthNames[month]} ${year}`;
-                
-                const firstDay = new Date(year, month, 1).getDay();
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
-                
-                // Add empty cells for days before the first day of the month
-                for (let i = 0; i < firstDay; i++) {
-                    const emptyDay = document.createElement('div');
-                    emptyDay.classList.add('day');
-                    calendarDays.appendChild(emptyDay);
-                }
-                
-                // Add cells for each day of the month
-                for (let i = 1; i <= daysInMonth; i++) {
-                    const day = document.createElement('div');
-                    day.classList.add('day');
-                    day.textContent = i;
-                    
-                    // Mark current day
-                    if (i === now.getDate() && month === now.getMonth() && year === now.getFullYear()) {
-                        day.classList.add('current-day');
-                    }
-                    
-                    // Randomly mark some days as workout days for demo
-                    if (Math.random() > 0.7) {
-                        day.classList.add('workout-day');
-                    }
-                    
-                    calendarDays.appendChild(day);
-                }
-            }
-            
-            // Initialize calendar
-            generateCalendar(currentMonth, currentYear);
-            
-            // Month navigation
-            document.getElementById('prevMonth').addEventListener('click', function() {
-                currentMonth--;
-                if (currentMonth < 0) {
-                    currentMonth = 11;
-                    currentYear--;
-                }
-                generateCalendar(currentMonth, currentYear);
-            });
-            
-            document.getElementById('nextMonth').addEventListener('click', function() {
-                currentMonth++;
-                if (currentMonth > 11) {
-                    currentMonth = 0;
-                    currentYear++;
-                }
-                generateCalendar(currentMonth, currentYear);
-            });
-            
-            // Button functionality
-            document.querySelectorAll('.action-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    alert(`${this.querySelector('span').textContent} feature would open here`);
-                });
-            });
-            
-            // Navigation items
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    // Don't change active class if clicking on the Workout Builder link
-                    if (!this.querySelector('a')) {
-                        document.querySelectorAll('.nav-item').forEach(nav => {
-                            nav.classList.remove('active');
-                        });
-                        this.classList.add('active');
-                    }
-                
-                });
-            });
-        });
-    </script>
+    <!-- Add this line to reference the external JavaScript file -->
+    <script src="notifications.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

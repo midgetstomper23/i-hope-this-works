@@ -61,7 +61,7 @@ async function initApp() {
         
     } catch (error) {
         console.error("Error initializing app:", error);
-        alert("Error loading workout data. Please check console for details.");
+        showNotification("Error loading workout data. Please check console for details.");
     }
 }
 
@@ -182,7 +182,7 @@ async function saveDay() {
     const dayIcon = dayIconInput.value;
     
     if (!dayName) {
-        alert("Please enter a name for your day");
+        showNotification("Please enter a name for your day");
         return;
     }
     
@@ -228,14 +228,14 @@ async function saveDay() {
         const result = await window.fitnessAppAPI.saveWorkoutData(workoutDays);
         
         if (result.success) {
-            alert(`"${dayName}" saved successfully with ${exercises.length} exercises!`);
+            showNotification(`"${dayName}" saved successfully with ${exercises.length} exercises!`);
             clearForm();
             renderSavedDays();
         } else {
-            alert("Error saving day: " + result.error);
+            showNotification("Error saving day: " + result.error);
         }
     } catch (error) {
-        alert("Error saving day: " + error.message);
+        showNotification("Error saving day: " + error.message);
     }
 }
 
@@ -280,7 +280,7 @@ function renderSavedDays() {
 function loadDay(dayId) {
     const day = workoutDays.find(d => d.id === dayId);
     if (!day) {
-        alert("Day not found!");
+        showNotification("Day not found!");
         return;
     }
     
@@ -320,12 +320,12 @@ async function deleteDay(dayId) {
                     clearForm();
                 }
                 renderSavedDays();
-                alert("Day deleted successfully!");
+                showNotification("Day deleted successfully!");
             } else {
-                alert("Error deleting day: " + result.error);
+                showNotification("Error deleting day: " + result.error);
             }
         } catch (error) {
-            alert("Error deleting day: " + error.message);
+            showNotification("Error deleting day: " + error.message);
         }
     }
 }
