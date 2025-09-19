@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Overload - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="progressive-page">
+    <div class="container">
+        <div class="progressive-container">
+            <button class="back-btn" id="backButton">← Back to Home</button>
+            
+            <header>
+                <h1>Progressive Overload</h1>
+                <p>Systematically increase your strength over time</p>
+            </header>
+
+            <div class="progressive-sections">
+                <!-- Overload Section -->
+                <div class="section-card" id="overload-section">
+                    <div class="section-icon">📈</div>
+                    <h2>Workout Progression</h2>
+                    <p>Set up automatic weight increases for your exercises</p>
+                    <button class="action-btn" id="setup-overload-btn">Setup Progression</button>
+                </div>
+
+                <!-- Image Bank Section -->
+                <div class="section-card" id="images-section">
+                    <div class="section-icon">🖼️</div>
+                    <h2>Progress Photos</h2>
+                    <p>Track visual progress with timeline photos</p>
+                    <button class="action-btn" id="view-images-btn">View Progress Photos</button>
+                </div>
+            </div>
+
+            <!-- Setup Overload Modal -->
+            <div class="modal" id="setupModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Setup Progressive Overload</h3>
+                        <button class="modal-close" id="modalClose">×</button>
+                    </div>
+                    
+                    <div class="setup-steps">
+                        <!-- Step 1: Select Workout -->
+                        <div class="setup-step" id="step1">
+                            <h4>Select Workout Plan</h4>
+                            <div class="workout-list" id="progressive-workout-list">
+                                <!-- Workouts will be populated here -->
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Select Day -->
+                        <div class="setup-step" id="step2" style="display: none;">
+                            <h4>Select Day</h4>
+                            <div class="day-list" id="progressive-day-list">
+                                <!-- Days will be populated here -->
+                            </div>
+                            <button class="action-btn btn-secondary back-to-workouts">← Back</button>
+                        </div>
+
+                        <!-- Step 3: Configure Exercises -->
+                        <div class="setup-step" id="step3" style="display: none;">
+                            <h4>Configure Exercise Progression</h4>
+                            <div class="exercises-config" id="exercises-config">
+                                <!-- Exercise configuration will be here -->
+                            </div>
+                            <button class="action-btn btn-secondary back-to-days">← Back</button>
+                            <button class="action-btn" id="save-progression-btn">Save Progression Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item">
+            <i>📅</i>
+            <span>Home</span>
+        </a>
+        <a href="workoutbuilder.html" class="nav-item">
+            <i>🏋️</i>
+            <span>Workout Builder</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+            <i>📈</i>
+            <span>Analytics</span>
+        </a>
+        <a href="progressive.html" class="nav-item active">
+            <i>⚙️</i>
+            <span>Progressive</span>
+        </a>
+    </div>
+
+    <!-- Add this modal right after the setup modal -->
+<!-- Image Bank Modal -->
+<div class="modal" id="imageBankModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Progress Photos</h3>
+            <button class="modal-close" id="imageBankClose">×</button>
+        </div>
+        
+        <div class="image-bank-content">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h4>Add New Photos</h4>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-placeholder">
+                        <div class="upload-icon">📸</div>
+                        <p>Drag & drop photos here or click to browse</p>
+                        <input type="file" id="photoUpload" multiple accept="image/*" style="display: none;">
+                        <button class="action-btn" id="browseBtn">Browse Files</button>
+                    </div>
+                </div>
+                <div class="upload-options">
+                    <div class="form-group">
+                        <label>Date Taken:</label>
+                        <input type="date" id="photoDate" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Angle:</label>
+                        <select id="photoAngle">
+                            <option value="front">Front</option>
+                            <option value="side">Side</option>
+                            <option value="back">Back</option>
+                            <option value="relaxed">Relaxed</option>
+                            <option value="flexed">Flexed</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button class="action-btn" id="processUploadBtn" disabled>Process Photos</button>
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <!-- Replace the current gallery section with this -->
+<div class="gallery-section">
+    <h4>Your Progress Photos</h4>
+    
+    <!-- Folder Navigation -->
+    <div class="folder-path" id="folderPath">
+        <button class="path-item" data-path="">📁 All Photos</button>
+        <!-- Path will be dynamically added here -->
+    </div>
+    
+    <!-- Folder View -->
+    <div class="folder-view" id="folderView">
+        <div class="folders-container" id="foldersContainer">
+            <!-- Folders will be displayed here -->
+        </div>
+        
+        <div class="photos-container" id="photosContainer">
+            <!-- Photos will be displayed here -->
+        </div>
+    </div>
+</div>
+<div class="gallery-actions">
+    <button class="action-btn btn-secondary" id="toggleDeleteMode">Delete Mode: Off</button>
+
+
+<!-- Comparison Modal -->
+<div class="modal" id="comparisonModal">
+    <div class="modal-content comparison-content">
+        <div class="modal-header">
+            <h3>Compare Photos</h3>
+            <button class="modal-close" id="comparisonClose">×</button>
+        </div>
+        <div class="comparison-container" id="comparisonContainer">
+            <div class="comparison-slider">
+                <div class="before-image">
+                    <img id="beforeImg" src="" alt="Before">
+                    <div class="image-info" id="beforeInfo"></div>
+                </div>
+                <div class="after-image">
+                    <img id="afterImg" src="" alt="After">
+                    <div class="image-info" id="afterInfo"></div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider" id="comparisonSlider">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="progressive.js"></script>
+</body>
+</html>
