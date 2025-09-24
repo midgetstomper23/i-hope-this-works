@@ -3,53 +3,18 @@
   "name": "generic workout",
   "schedule": [
     {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
+      "dayId": "day-1757822976102",
+      "dayName": "PULL DAY SEX V1",
       "icon": "💪"
     },
     {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
-      "icon": "💪"
+      "dayId": "day-1757634610452",
+      "dayName": "LEG SEX MODE V1",
+      "icon": "🦵"
     },
     {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
-    },
-    {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
-      "icon": "💪"
-    },
-    {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
-    },
-    {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
+      "dayId": "day-1757822976102",
+      "dayName": "PULL DAY SEX V1",
       "icon": "💪"
     },
     {
@@ -58,21 +23,21 @@
       "icon": "🛌"
     },
     {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
+      "dayId": "day-1757634610452",
+      "dayName": "LEG SEX MODE V1",
+      "icon": "🦵"
+    },
+    {
+      "dayId": "day-1757822976102",
+      "dayName": "PULL DAY SEX V1",
       "icon": "💪"
     },
     {
-      "dayId": "day-1756607053128",
-      "dayName": "Generic Arm Day",
-      "icon": "💪"
-    },
-    {
-      "dayId": "day-1756607190561",
-      "dayName": "Generic Leg Day",
-      "icon": "🏋️"
+      "dayId": null,
+      "dayName": "Rest Day",
+      "icon": "🛌"
     }
   ],
   "createdAt": "2025-08-31T03:06:14.066Z",
-  "updatedAt": "2025-08-31T03:06:30.780Z"
+  "updatedAt": "2025-09-19T01:10:00.000Z"
 }

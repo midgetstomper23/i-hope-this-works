@@ -50,6 +50,29 @@ h1 {
     margin-bottom: 20px;
 }
 
+.calendar .day.workout-day {
+    background-color: #5964f8 !important; /* cool indigo */
+    color: white;
+    font-weight: bold;
+}
+
+.calendar .day.workout-day:hover {
+    background-color: #464fe6 !important;
+}
+
+/* Restore original current-day styling from your base rules */
+.calendar .day.current-day {
+    background-color: #9bc2e6 !important;
+    color: black;
+    font-weight: normal;
+}
+
+.calendar .day.current-day.workout-day {
+    background-color: #7aa7d8 !important; /* blend: current-day + subtle emphasis */
+    color: black;
+    font-weight: 600;
+}
+
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -1854,4 +1877,250 @@ input, select, textarea {
 
 .list-view .photo-info {
     flex: 1;
+}
+
+/* ===== PROGRESSION POPUP STYLES ===== */
+.progression-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.progression-popup .popup-content {
+    background: #2d2d30;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.progression-popup .popup-header {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progression-popup .popup-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.progression-popup .popup-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.progression-popup .popup-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progression-popup .popup-body {
+    padding: 20px;
+}
+
+.progression-popup .popup-body p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.progression-exercises {
+    margin-bottom: 20px;
+}
+
+.progression-popup .plan-section {
+    background: #3a3a3a;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.progression-popup .plan-section h4 {
+    color: #3498db;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.exercise-increase {
+    background: #2d2d30;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.exercise-increase:last-child {
+    margin-bottom: 0;
+}
+
+.exercise-increase strong {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.exercise-increase span {
+    color: #ccc;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.exercise-increase span:last-child {
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+.progression-popup .popup-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.progression-popup .popup-actions .action-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== PROGRESSION CALENDAR STYLES ===== */
+.progression-day {
+    position: relative;
+}
+
+.progression-day::after {
+    content: '📈';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    background: #3498db;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.progression-day.workout-day::after {
+    background: #e74c3c;
+}
+
+/* ===== PROGRESSION SETUP STYLES ===== */
+.progression-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progression-header h4 {
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.progression-header p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.global-settings {
+    background: #3a3a3a;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.global-settings h5 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.exercise-config {
+    background: #3a3a3a;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exercise-header h5 {
+    color: white;
+    margin: 0;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #3498db;
+}
+
+.progression-settings {
+    border-top: 1px solid #555;
+    padding-top: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .progression-popup .popup-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .progression-popup .popup-actions {
+        flex-direction: column;
+    }
 }

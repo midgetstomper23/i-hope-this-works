@@ -1,0 +1,90 @@
+[
+  {
+    "id": "progression-1758261464690",
+    "workoutId": "workout-1756609574066",
+    "workoutName": "generic workout",
+    "dayId": "day-1757822976102",
+    "dayName": "PULL DAY SEX V1",
+    "exercises": {
+      "Rows": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 35,
+        "currentValue": 35,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Dumbbell Curls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 20,
+        "currentValue": 20,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Face Pulls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 60,
+        "currentValue": 60,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Shrugs": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 40,
+        "currentValue": 40,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Banded Curls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 70,
+        "currentValue": 70,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Forearm Curls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 20,
+        "currentValue": 20,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Farmers Walk": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 30,
+        "currentValue": 30,
+        "startDate": "2025-09-19",
+        "nextIncreaseDate": "2025-10-03",
+        "lastIncreased": null,
+        "enabled": true
+      }
+    },
+    "startDate": "2025-09-19",
+    "createdAt": "2025-09-19T05:57:44.690Z"
+  }
+]

@@ -18,7 +18,7 @@ function createWindow() {
   win.loadFile('index.html');
   
   // Open DevTools for development (remove in production)
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
 }
 
 // Handle reading workout data
@@ -102,6 +102,60 @@ ipcMain.handle('read-current-workout', async () => {
   }
 });
 
+// Handle reading progression plans
+ipcMain.handle('read-progression-plans', async () => {
+  try {
+    const dataPath = path.join(__dirname, 'progression-plans.json');
+    if (fs.existsSync(dataPath)) {
+      const data = fs.readFileSync(dataPath, 'utf8');
+      return JSON.parse(data);
+    }
+    return []; // Return empty array if no file exists
+  } catch (error) {
+    console.error('Error reading progression plans:', error);
+    return [];
+  }
+});
+
+// Handle saving progression plans
+ipcMain.handle('save-progression-plans', async (event, data) => {
+  try {
+    const dataPath = path.join(__dirname, 'progression-plans.json');
+    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+    return { success: true };
+  } catch (error) {
+    console.error('Error saving progression plans:', error);
+    return { success: false, error: error.message };
+  }
+});
+
+// Handle reading calendar data
+ipcMain.handle('read-calendar-data', async () => {
+  try {
+    const dataPath = path.join(__dirname, 'calendar-data.json');
+    if (fs.existsSync(dataPath)) {
+      const data = fs.readFileSync(dataPath, 'utf8');
+      return JSON.parse(data);
+    }
+    return []; // Return empty array if no file exists
+  } catch (error) {
+    console.error('Error reading calendar data:', error);
+    return [];
+  }
+});
+
+// Handle saving calendar data
+ipcMain.handle('save-calendar-data', async (event, data) => {
+  try {
+    const dataPath = path.join(__dirname, 'calendar-data.json');
+    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+    return { success: true };
+  } catch (error) {
+    console.error('Error saving calendar data:', error);
+    return { success: false, error: error.message };
+  }
+});
+
 app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
@@ -113,5 +167,31 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
+  }
+});
+
+// ===== Analytics: Workout History IPC =====
+ipcMain.handle('read-workout-history', async () => {
+  try {
+    const dataPath = path.join(__dirname, 'workout-history.json');
+    if (fs.existsSync(dataPath)) {
+      const data = fs.readFileSync(dataPath, 'utf8');
+      return JSON.parse(data);
+    }
+    return [];
+  } catch (error) {
+    console.error('Error reading workout history:', error);
+    return [];
+  }
+});
+
+ipcMain.handle('save-workout-history', async (event, data) => {
+  try {
+    const dataPath = path.join(__dirname, 'workout-history.json');
+    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+    return { success: true };
+  } catch (error) {
+    console.error('Error saving workout history:', error);
+    return { success: false, error: error.message };
   }
 });

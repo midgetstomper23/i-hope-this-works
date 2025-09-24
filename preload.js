@@ -10,5 +10,17 @@ contextBridge.exposeInMainWorld('fitnessAppAPI', {
   saveWorkoutPlans: (data) => ipcRenderer.invoke('save-workout-plans', data),
   readWorkoutPlans: () => ipcRenderer.invoke('read-workout-plans'),
   saveCurrentWorkout: (data) => ipcRenderer.invoke('save-current-workout', data),
-  readCurrentWorkout: () => ipcRenderer.invoke('read-current-workout')
+  readCurrentWorkout: () => ipcRenderer.invoke('read-current-workout'),
+  
+  // Progression plan functions (for Progressive Overload)
+  saveProgressionPlans: (data) => ipcRenderer.invoke('save-progression-plans', data),
+  readProgressionPlans: () => ipcRenderer.invoke('read-progression-plans'),
+  
+  // Calendar data functions (for Calendar integration)
+  saveCalendarData: (data) => ipcRenderer.invoke('save-calendar-data', data),
+  readCalendarData: () => ipcRenderer.invoke('read-calendar-data'),
+
+  // Analytics: workout history
+  readWorkoutHistory: () => ipcRenderer.invoke('read-workout-history'),
+  saveWorkoutHistory: (data) => ipcRenderer.invoke('save-workout-history', data)
 });

@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     backToWorkoutsBtn.addEventListener('click', showWorkoutSelection);
     backToDaysBtn.addEventListener('click', showDaySelection);
     metricSelect.addEventListener('change', updateChart);
+    const demoBtn = document.getElementById('generateDemoData');
+    if (demoBtn) demoBtn.addEventListener('click', generateDemoData);
     
     // Load workout plans and history
     loadWorkoutPlans();
@@ -326,6 +328,111 @@ function renderProgressChart(metric) {
     
     // Update legend
     updateChartLegend(chartData.datasets);
+}
+
+// ===== Demo Data Generator =====
+async function generateDemoData() {
+    try {
+        // Load plans and days
+        let plans = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutPlans) {
+            plans = await window.fitnessAppAPI.readWorkoutPlans();
+        } else {
+            plans = JSON.parse(localStorage.getItem('workoutPlans') || '[]');
+        }
+
+        // Fallback if no plans
+        if (!plans || plans.length === 0) {
+            showNotification('No workout plans found to seed data for.', 'error');
+            return;
+        }
+
+        // Build a set of unique days from all plans
+        const uniqueDayIds = new Set();
+        plans.forEach(plan => {
+            (plan.schedule || []).forEach(d => { if (d && d.dayId) uniqueDayIds.add(d.dayId); });
+        });
+
+        // Load day definitions to get exercise names
+        let daysDef = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutData) {
+            daysDef = await window.fitnessAppAPI.readWorkoutData();
+        } else {
+            daysDef = JSON.parse(localStorage.getItem('workoutData') || '[]');
+        }
+
+        // Prepare history array
+        let history = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutHistory) {
+            history = await window.fitnessAppAPI.readWorkoutHistory();
+        } else {
+            history = JSON.parse(localStorage.getItem('workoutHistory') || '[]');
+        }
+
+        const today = new Date();
+        const start = new Date();
+        start.setDate(today.getDate() - 60); // last 60 days
+
+        // Helper to random walk values upwards
+        function trend(base, step, variance=0.2) {
+            const noise = (Math.random() - 0.5) * 2 * variance * step;
+            return Math.max(0, base + step + noise);
+        }
+
+        // Create ~18-24 sessions spread over last 60 days
+        const sessionCount = 22;
+        for (let i = 0; i < sessionCount; i++) {
+            const sessionDate = new Date(start);
+            sessionDate.setDate(start.getDate() + Math.floor((i + 1) * (60 / sessionCount)));
+
+            // Pick a random dayId from uniqueDayIds
+            const dayIdsArray = Array.from(uniqueDayIds);
+            if (dayIdsArray.length === 0) break;
+            const dayId = dayIdsArray[i % dayIdsArray.length];
+            const day = daysDef.find(d => d.id === dayId);
+            if (!day) continue;
+
+            // Seed baseline values per exercise
+            let baseWeight = 20 + Math.random() * 30;
+            const exercises = (day.exercises || []).slice(0, 4).map((ex, idx) => {
+                baseWeight = trend(baseWeight, 1.2);
+                const sets = parseInt(ex.sets || 3, 10);
+                const reps = parseInt(ex.reps || 10, 10);
+                return {
+                    name: ex.name || `Exercise ${idx+1}`,
+                    weight: Math.round(baseWeight),
+                    avgWeight: Math.round(baseWeight),
+                    sets: sets,
+                    reps: reps,
+                    restTime: parseInt(ex.rest || 60, 10)
+                };
+            });
+
+            history.push({
+                workoutId: plans[0].id,
+                dayId: dayId,
+                date: sessionDate.toISOString(),
+                exercises: exercises
+            });
+        }
+
+        // Save history
+        if (window.fitnessAppAPI && window.fitnessAppAPI.saveWorkoutHistory) {
+            await window.fitnessAppAPI.saveWorkoutHistory(history);
+        } else {
+            localStorage.setItem('workoutHistory', JSON.stringify(history));
+        }
+
+        showNotification('Demo data generated. Select a plan/day to view charts.', 'success');
+
+        // Refresh if a day is already selected
+        if (selectedDay) {
+            updateChart();
+        }
+    } catch (e) {
+        console.error('Error generating demo data:', e);
+        showNotification('Error generating demo data', 'error');
+    }
 }
 
 function getChartDataForDay(dayId, metric) {

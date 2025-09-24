@@ -23,12 +23,20 @@ const saveProgressionBtn = document.getElementById('save-progression-btn');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Progressive page loaded');
     
+    // Debug: Check if elements exist
+    console.log('backButton:', backButton);
+    console.log('setupOverloadBtn:', setupOverloadBtn);
+    console.log('viewImagesBtn:', viewImagesBtn);
+    console.log('setupModal:', setupModal);
+    console.log('modalClose:', modalClose);
+    console.log('saveProgressionBtn:', saveProgressionBtn);
+    
     // Set up event listeners
-    backButton.addEventListener('click', goBack);
-    setupOverloadBtn.addEventListener('click', openSetupModal);
-    viewImagesBtn.addEventListener('click', showImageBank);
-    modalClose.addEventListener('click', closeModal);
-    saveProgressionBtn.addEventListener('click', saveProgressionPlan);
+    if (backButton) backButton.addEventListener('click', goBack);
+    if (setupOverloadBtn) setupOverloadBtn.addEventListener('click', openSetupModal);
+    if (viewImagesBtn) viewImagesBtn.addEventListener('click', showImageBank);
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (saveProgressionBtn) saveProgressionBtn.addEventListener('click', saveProgressionPlan);
     
     // Image bank event listeners
     document.getElementById('imageBankClose').addEventListener('click', closeImageBank);
@@ -53,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load existing progression plans
     loadProgressionPlans();
+    
+    // Check for progression increases on page load
+    checkProgressionIncreases();
     
     // Initialize folder system
     currentPath = [];
@@ -720,9 +731,20 @@ function goBack() {
 }
 
 function openSetupModal() {
-    setupModal.style.display = 'block';
-    loadWorkoutPlans();
-    showStep(1);
+    console.log('openSetupModal called');
+    console.log('setupModal:', setupModal);
+    
+    if (setupModal) {
+        setupModal.style.display = 'block';
+        setupModal.style.zIndex = '10000';
+        console.log('Modal displayed');
+        console.log('Modal computed style:', window.getComputedStyle(setupModal));
+        loadWorkoutPlans();
+        showStep(1);
+    } else {
+        console.error('Setup modal not found!');
+        alert('Setup modal not found. Please check the HTML structure.');
+    }
 }
 
 function closeModal() {
@@ -765,6 +787,7 @@ async function loadWorkoutPlans() {
             workoutPlans = saved ? JSON.parse(saved) : [];
         }
         
+        console.log('Loaded workout plans:', workoutPlans);
         displayWorkoutPlans(workoutPlans);
     } catch (error) {
         console.error('Error loading workout plans:', error);
@@ -773,12 +796,19 @@ async function loadWorkoutPlans() {
 
 function displayWorkoutPlans(workoutPlans) {
     const workoutList = document.getElementById('progressive-workout-list');
-    if (!workoutList) return;
+    console.log('displayWorkoutPlans called with:', workoutPlans);
+    console.log('workoutList element:', workoutList);
+    
+    if (!workoutList) {
+        console.error('Workout list element not found!');
+        return;
+    }
     
     workoutList.innerHTML = '';
     
     if (workoutPlans.length === 0) {
-        workoutList.innerHTML = '<p class="no-data">No workout plans found.</p>';
+        console.log('No workout plans found, showing message');
+        workoutList.innerHTML = '<p class="no-data">No workout plans found. Please create a workout plan first in the Workout Builder.</p>';
         return;
     }
     
@@ -864,16 +894,24 @@ async function loadExercisesConfiguration() {
             savedDays = saved ? JSON.parse(saved) : [];
         }
         
+        console.log('Loaded saved days:', savedDays);
+        console.log('Looking for dayId:', selectedDay.dayId);
+        console.log('Selected day:', selectedDay);
+        
         const dayData = savedDays.find(d => d.id === selectedDay.dayId);
+        console.log('Found day data:', dayData);
+        
         if (!dayData || !dayData.exercises) {
-            exercisesConfig.innerHTML = '<p class="no-data">No exercises found for this day.</p>';
+            console.log('No day data or exercises found');
+            exercisesConfig.innerHTML = '<p class="no-data">No exercises found for this day. Day ID: ' + selectedDay.dayId + '</p>';
             return;
         }
         
+        console.log('Exercises found:', dayData.exercises);
         displayExercisesConfiguration(dayData.exercises);
     } catch (error) {
         console.error('Error loading exercises:', error);
-        exercisesConfig.innerHTML = '<p class="error">Error loading exercises</p>';
+        exercisesConfig.innerHTML = '<p class="error">Error loading exercises: ' + error.message + '</p>';
     }
 }
 
@@ -881,7 +919,20 @@ function displayExercisesConfiguration(exercises) {
     const exercisesConfig = document.getElementById('exercises-config');
     if (!exercisesConfig) return;
     
-    exercisesConfig.innerHTML = '<h4>Configure Progression:</h4>';
+    exercisesConfig.innerHTML = `
+        <div class="progression-header">
+            <h4>Configure Exercise Progression</h4>
+            <p>Set up automatic progression for each exercise</p>
+        </div>
+        
+        <div class="global-settings">
+            <h5>Global Settings</h5>
+            <div class="form-group">
+                <label>Starting Date:</label>
+                <input type="date" id="global-start-date" value="${new Date().toISOString().split('T')[0]}">
+            </div>
+        </div>
+    `;
     
     exercises.forEach((exercise, index) => {
         const exerciseConfig = document.createElement('div');
@@ -896,21 +947,37 @@ function displayExercisesConfiguration(exercises) {
             </div>
             
             <div class="progression-settings" style="display: none;">
-                <div class="form-group">
-                    <label>Increase Amount (lbs/kg):</label>
-                    <input type="number" min="0.5" step="0.5" value="5" 
-                           class="increase-amount" data-exercise="${exercise.name}">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Variable to Increase:</label>
+                        <select class="progression-variable" data-exercise="${exercise.name}">
+                            <option value="weight">Weight</option>
+                            <option value="reps">Reps</option>
+                            <option value="sets">Sets</option>
+                            <option value="time">Time (seconds)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Increase Amount:</label>
+                        <input type="number" min="0.5" step="0.5" value="5" 
+                               class="increase-amount" data-exercise="${exercise.name}">
+                    </div>
                 </div>
                 
-                <div class="form-group">
-                    <label>Interval (weeks):</label>
-                    <input type="number" min="1" value="2" 
-                           class="interval-weeks" data-exercise="${exercise.name}">
-                </div>
-                
-                <div class="form-group">
-                    <label>Next Increase Date:</label>
-                    <input type="date" class="next-increase-date" data-exercise="${exercise.name}">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Increase Interval (weeks):</label>
+                        <input type="number" min="1" value="2" 
+                               class="interval-weeks" data-exercise="${exercise.name}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Starting Value:</label>
+                        <input type="number" min="0" step="0.5" 
+                               class="starting-value" data-exercise="${exercise.name}"
+                               value="${exercise.weight || exercise.reps || exercise.sets || 0}">
+                    </div>
                 </div>
             </div>
         `;
@@ -925,19 +992,19 @@ function displayExercisesConfiguration(exercises) {
             });
         }
         
-        // Set default next increase date (2 weeks from now)
-        const nextDateInput = exerciseConfig.querySelector('.next-increase-date');
-        if (nextDateInput) {
-            const twoWeeksFromNow = new Date();
-            twoWeeksFromNow.setDate(twoWeeksFromNow.getDate() + 14);
-            nextDateInput.value = twoWeeksFromNow.toISOString().split('T')[0];
-        }
-        
         exercisesConfig.appendChild(exerciseConfig);
     });
 }
 
 async function saveProgressionPlan() {
+    // Get global settings
+    const globalStartDate = document.getElementById('global-start-date').value;
+    
+    if (!globalStartDate) {
+        showNotification('Please select a starting date', 'error');
+        return;
+    }
+    
     // Collect all progression settings
     const progressionSettings = {};
     
@@ -949,24 +1016,46 @@ async function saveProgressionPlan() {
         const enabled = enableCheckbox.checked;
         
         if (enabled) {
+            const increaseAmount = parseFloat(config.querySelector('.increase-amount').value);
+            const intervalWeeks = parseInt(config.querySelector('.interval-weeks').value);
+            const progressionVariable = config.querySelector('.progression-variable').value;
+            const startingValue = parseFloat(config.querySelector('.starting-value').value);
+            
+            // Calculate next increase date based on starting date and interval
+            const startDate = new Date(globalStartDate);
+            const nextIncreaseDate = new Date(startDate);
+            nextIncreaseDate.setDate(nextIncreaseDate.getDate() + (intervalWeeks * 7));
+            
             progressionSettings[exerciseName] = {
-                increaseAmount: parseFloat(config.querySelector('.increase-amount').value),
-                intervalWeeks: parseInt(config.querySelector('.interval-weeks').value),
-                nextIncreaseDate: config.querySelector('.next-increase-date').value,
+                variable: progressionVariable,
+                increaseAmount: increaseAmount,
+                intervalWeeks: intervalWeeks,
+                startingValue: startingValue,
+                currentValue: startingValue,
+                startDate: globalStartDate,
+                nextIncreaseDate: nextIncreaseDate.toISOString().split('T')[0],
                 lastIncreased: null,
                 enabled: true
             };
         }
     });
     
+    // Check if any exercises are enabled
+    if (Object.keys(progressionSettings).length === 0) {
+        showNotification('Please enable progression for at least one exercise', 'error');
+        return;
+    }
+    
     // Save progression plan
     try {
         const progressionPlan = {
+            id: 'progression-' + Date.now(),
             workoutId: selectedWorkout.id,
             workoutName: selectedWorkout.name,
             dayId: selectedDay.dayId,
             dayName: selectedDay.dayName,
             exercises: progressionSettings,
+            startDate: globalStartDate,
             createdAt: new Date().toISOString()
         };
         
@@ -992,12 +1081,13 @@ async function saveProgressionPlan() {
             localStorage.setItem('progressionPlans', JSON.stringify(filteredPlans));
         }
         
-        // SUCCESS: Replaced alert with notification
-        showNotification('Progression plan saved successfully!', 'success');
+        // Update calendar with progression dates
+        await updateCalendarWithProgression(progressionPlan);
+        
+        showNotification('Progression plan saved successfully! Calendar updated with increase days.', 'success');
         closeModal();
         
     } catch (error) {
-        // ERROR: Replaced alert with notification + console error
         console.error('Error saving progression plan:', error);
         showNotification('Error saving progression plan', 'error');
     }
@@ -1043,5 +1133,239 @@ async function loadProgressionPlans() {
         console.log('Loaded progression plans:', progressionPlans);
     } catch (error) {
         console.error('Error loading progression plans:', error);
+    }
+}
+
+// Update calendar with progression increase dates
+async function updateCalendarWithProgression(progressionPlan) {
+    try {
+        // Get existing calendar data
+        let calendarData = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readCalendarData) {
+            calendarData = await window.fitnessAppAPI.readCalendarData();
+        } else {
+            const saved = localStorage.getItem('calendarData');
+            calendarData = saved ? JSON.parse(saved) : [];
+        }
+        
+        // Calculate all increase dates for the next 6 months
+        const increaseDates = calculateIncreaseDates(progressionPlan);
+        
+        // Add progression markers to calendar
+        increaseDates.forEach(date => {
+            const existingEntry = calendarData.find(entry => entry.date === date);
+            if (existingEntry) {
+                existingEntry.progressionIncrease = true;
+                existingEntry.progressionPlanId = progressionPlan.id;
+            } else {
+                calendarData.push({
+                    date: date,
+                    progressionIncrease: true,
+                    progressionPlanId: progressionPlan.id,
+                    type: 'progression'
+                });
+            }
+        });
+        
+        // Save updated calendar data
+        if (window.fitnessAppAPI && window.fitnessAppAPI.saveCalendarData) {
+            await window.fitnessAppAPI.saveCalendarData(calendarData);
+        } else {
+            localStorage.setItem('calendarData', JSON.stringify(calendarData));
+        }
+        
+    } catch (error) {
+        console.error('Error updating calendar with progression:', error);
+    }
+}
+
+// Calculate all increase dates for a progression plan
+function calculateIncreaseDates(progressionPlan) {
+    const dates = [];
+    const startDate = new Date(progressionPlan.startDate);
+    
+    // Get the maximum interval from all exercises
+    const maxInterval = Math.max(...Object.values(progressionPlan.exercises).map(ex => ex.intervalWeeks));
+    
+    // Calculate dates for the next 6 months
+    const endDate = new Date(startDate);
+    endDate.setMonth(endDate.getMonth() + 6);
+    
+    let currentDate = new Date(startDate);
+    currentDate.setDate(currentDate.getDate() + (maxInterval * 7)); // First increase
+    
+    while (currentDate <= endDate) {
+        dates.push(currentDate.toISOString().split('T')[0]);
+        currentDate.setDate(currentDate.getDate() + (maxInterval * 7));
+    }
+    
+    return dates;
+}
+
+// Check for progression increases on calendar load
+async function checkProgressionIncreases() {
+    try {
+        const today = new Date().toISOString().split('T')[0];
+        
+        // Get progression plans
+        let progressionPlans = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readProgressionPlans) {
+            progressionPlans = await window.fitnessAppAPI.readProgressionPlans();
+        } else {
+            const saved = localStorage.getItem('progressionPlans');
+            progressionPlans = saved ? JSON.parse(saved) : [];
+        }
+        
+        // Check if today is an increase day
+        const todayPlans = progressionPlans.filter(plan => {
+            return Object.values(plan.exercises).some(exercise => 
+                exercise.nextIncreaseDate === today
+            );
+        });
+        
+        if (todayPlans.length > 0) {
+            showProgressionPopup(todayPlans);
+        }
+        
+    } catch (error) {
+        console.error('Error checking progression increases:', error);
+    }
+}
+
+// Show progression increase popup
+function showProgressionPopup(plans) {
+    const popup = document.createElement('div');
+    popup.className = 'progression-popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>📈 Time to Progress!</h3>
+                <button class="popup-close">×</button>
+            </div>
+            <div class="popup-body">
+                <p>It's time to increase your weights/reps for the following exercises:</p>
+                <div class="progression-exercises">
+                    ${plans.map(plan => `
+                        <div class="plan-section">
+                            <h4>${plan.dayName}</h4>
+                            ${Object.entries(plan.exercises).map(([exerciseName, exercise]) => `
+                                <div class="exercise-increase">
+                                    <strong>${exerciseName}</strong>
+                                    <span>Increase ${exercise.variable} by ${exercise.increaseAmount}</span>
+                                    <span>Current: ${exercise.currentValue} → New: ${exercise.currentValue + exercise.increaseAmount}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="popup-actions">
+                    <button class="action-btn" id="applyProgression">Apply Increases</button>
+                    <button class="action-btn btn-secondary" id="skipProgression">Skip for Now</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(popup);
+    
+    // Event listeners
+    popup.querySelector('.popup-close').addEventListener('click', () => {
+        document.body.removeChild(popup);
+    });
+    
+    popup.querySelector('#applyProgression').addEventListener('click', () => {
+        applyProgressionIncreases(plans);
+        document.body.removeChild(popup);
+    });
+    
+    popup.querySelector('#skipProgression').addEventListener('click', () => {
+        skipProgressionIncreases(plans);
+        document.body.removeChild(popup);
+    });
+}
+
+// Apply progression increases
+async function applyProgressionIncreases(plans) {
+    try {
+        // Update progression plans with new values
+        let progressionPlans = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readProgressionPlans) {
+            progressionPlans = await window.fitnessAppAPI.readProgressionPlans();
+        } else {
+            const saved = localStorage.getItem('progressionPlans');
+            progressionPlans = saved ? JSON.parse(saved) : [];
+        }
+        
+        plans.forEach(plan => {
+            const planIndex = progressionPlans.findIndex(p => p.id === plan.id);
+            if (planIndex !== -1) {
+                Object.entries(plan.exercises).forEach(([exerciseName, exercise]) => {
+                    if (exercise.nextIncreaseDate === new Date().toISOString().split('T')[0]) {
+                        // Update current value
+                        progressionPlans[planIndex].exercises[exerciseName].currentValue += exercise.increaseAmount;
+                        progressionPlans[planIndex].exercises[exerciseName].lastIncreased = new Date().toISOString();
+                        
+                        // Calculate next increase date
+                        const nextDate = new Date();
+                        nextDate.setDate(nextDate.getDate() + (exercise.intervalWeeks * 7));
+                        progressionPlans[planIndex].exercises[exerciseName].nextIncreaseDate = nextDate.toISOString().split('T')[0];
+                    }
+                });
+            }
+        });
+        
+        // Save updated plans
+        if (window.fitnessAppAPI && window.fitnessAppAPI.saveProgressionPlans) {
+            await window.fitnessAppAPI.saveProgressionPlans(progressionPlans);
+        } else {
+            localStorage.setItem('progressionPlans', JSON.stringify(progressionPlans));
+        }
+        
+        showNotification('Progression increases applied successfully!', 'success');
+        
+    } catch (error) {
+        console.error('Error applying progression increases:', error);
+        showNotification('Error applying progression increases', 'error');
+    }
+}
+
+// Skip progression increases
+async function skipProgressionIncreases(plans) {
+    try {
+        // Update next increase dates to tomorrow
+        let progressionPlans = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readProgressionPlans) {
+            progressionPlans = await window.fitnessAppAPI.readProgressionPlans();
+        } else {
+            const saved = localStorage.getItem('progressionPlans');
+            progressionPlans = saved ? JSON.parse(saved) : [];
+        }
+        
+        plans.forEach(plan => {
+            const planIndex = progressionPlans.findIndex(p => p.id === plan.id);
+            if (planIndex !== -1) {
+                Object.entries(plan.exercises).forEach(([exerciseName, exercise]) => {
+                    if (exercise.nextIncreaseDate === new Date().toISOString().split('T')[0]) {
+                        // Move next increase to tomorrow
+                        const tomorrow = new Date();
+                        tomorrow.setDate(tomorrow.getDate() + 1);
+                        progressionPlans[planIndex].exercises[exerciseName].nextIncreaseDate = tomorrow.toISOString().split('T')[0];
+                    }
+                });
+            }
+        });
+        
+        // Save updated plans
+        if (window.fitnessAppAPI && window.fitnessAppAPI.saveProgressionPlans) {
+            await window.fitnessAppAPI.saveProgressionPlans(progressionPlans);
+        } else {
+            localStorage.setItem('progressionPlans', JSON.stringify(progressionPlans));
+        }
+        
+        showNotification('Progression increases skipped. Will remind you tomorrow.', 'info');
+        
+    } catch (error) {
+        console.error('Error skipping progression increases:', error);
+        showNotification('Error skipping progression increases', 'error');
     }
 }

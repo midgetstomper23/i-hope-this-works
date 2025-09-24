@@ -20,9 +20,13 @@ function updateCurrentWorkoutDisplay() {
     const planDetailsElement = document.getElementById('current-plan-details');
     
     // Use the global currentWorkout variable
-    if (window.currentWorkout) {
+    if (window.currentWorkout && window.currentWorkout.name) {
         planNameElement.textContent = window.currentWorkout.name;
-        planDetailsElement.textContent = `${getWorkoutDayCount(window.currentWorkout)} workout days, ${getWorkoutDaysSummary(window.currentWorkout)}`;
+        const dayCount = getWorkoutDayCount(window.currentWorkout);
+        const summary = getWorkoutDaysSummary(window.currentWorkout);
+        planDetailsElement.textContent = dayCount > 0
+            ? `${dayCount} workout days, ${summary}`
+            : 'All days are rest days';
     } else {
         planNameElement.textContent = 'None';
         planDetailsElement.textContent = 'No workout plan selected';
@@ -51,9 +55,34 @@ function getWorkoutDaysSummary(workoutPlan) {
         .join(', ');
 }
 
+// Load current workout
+async function loadCurrentWorkout() {
+    try {
+        console.log('Workout Builder: Loading current workout...');
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readCurrentWorkout) {
+            window.currentWorkout = await window.fitnessAppAPI.readCurrentWorkout();
+            console.log('Workout Builder: Loaded from API:', window.currentWorkout);
+        } else {
+            const saved = localStorage.getItem('currentWorkout');
+            window.currentWorkout = saved ? JSON.parse(saved) : null;
+            console.log('Workout Builder: Loaded from localStorage:', window.currentWorkout);
+        }
+        
+        console.log('Workout Builder: Final current workout:', window.currentWorkout);
+        updateCurrentWorkoutDisplay();
+    } catch (error) {
+        console.error('Error loading current workout:', error);
+        window.currentWorkout = null;
+        updateCurrentWorkoutDisplay();
+    }
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Workout Builder page loaded');
+    
+    // Load current workout first
+    loadCurrentWorkout();
     
     // Set up back button
     const backButton = document.getElementById('backButton');
@@ -91,17 +120,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initialize current workout display
-    updateCurrentWorkoutDisplay();
-    
     // Update display when page gains focus
     window.addEventListener('focus', function() {
-        updateCurrentWorkoutDisplay();
+        loadCurrentWorkout();
     });
     
     // Update display when current workout changes
     window.addEventListener('currentWorkoutChanged', function() {
-        updateCurrentWorkoutDisplay();
+        loadCurrentWorkout();
     });
     
     // Add keyboard shortcut for back button (Esc key)

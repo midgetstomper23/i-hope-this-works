@@ -1,0 +1,6866 @@
+[
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T06:47:07.397Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 22,
+        "avgWeight": 22,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T06:47:10.164Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 54,
+        "avgWeight": 54,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 22,
+        "avgWeight": 22,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T06:47:20.151Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 22,
+        "avgWeight": 22,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T06:47:28.932Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 22,
+        "avgWeight": 22,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 54,
+        "avgWeight": 54,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 54,
+        "avgWeight": 54,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T06:47:57.163Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 33,
+        "avgWeight": 33,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T19:43:20.456Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 24,
+        "avgWeight": 24,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T19:43:21.508Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-23T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-26T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-07-29T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-07-31T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-03T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-06T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-09T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-11T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 44,
+        "avgWeight": 44,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 45,
+        "avgWeight": 45,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-14T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-17T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 38,
+        "avgWeight": 38,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-19T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-22T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-25T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 40,
+        "avgWeight": 40,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-08-28T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 34,
+        "avgWeight": 34,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 35,
+        "avgWeight": 35,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 36,
+        "avgWeight": 36,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 37,
+        "avgWeight": 37,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-08-30T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 27,
+        "avgWeight": 27,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 28,
+        "avgWeight": 28,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-02T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 22,
+        "avgWeight": 22,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 23,
+        "avgWeight": 23,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 25,
+        "avgWeight": 25,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 26,
+        "avgWeight": 26,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-05T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-08T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 50,
+        "avgWeight": 50,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-10T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 51,
+        "avgWeight": 51,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 52,
+        "avgWeight": 52,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 53,
+        "avgWeight": 53,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-13T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 39,
+        "avgWeight": 39,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 41,
+        "avgWeight": 41,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 42,
+        "avgWeight": 42,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 43,
+        "avgWeight": 43,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757822976102",
+    "date": "2025-09-16T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Rows",
+        "weight": 29,
+        "avgWeight": 29,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 120
+      },
+      {
+        "name": "Dumbbell Curls",
+        "weight": 30,
+        "avgWeight": 30,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 60
+      },
+      {
+        "name": "Face Pulls",
+        "weight": 31,
+        "avgWeight": 31,
+        "sets": 4,
+        "reps": 25,
+        "restTime": 60
+      },
+      {
+        "name": "Shrugs",
+        "weight": 32,
+        "avgWeight": 32,
+        "sets": 4,
+        "reps": 20,
+        "restTime": 60
+      }
+    ]
+  },
+  {
+    "workoutId": "workout-1756609574066",
+    "dayId": "day-1757634610452",
+    "date": "2025-09-18T23:02:15.178Z",
+    "exercises": [
+      {
+        "name": "Normal Squats",
+        "weight": 46,
+        "avgWeight": 46,
+        "sets": 4,
+        "reps": 12,
+        "restTime": 120
+      },
+      {
+        "name": "Calf Raises",
+        "weight": 47,
+        "avgWeight": 47,
+        "sets": 4,
+        "reps": 15,
+        "restTime": 75
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "weight": 48,
+        "avgWeight": 48,
+        "sets": 3,
+        "reps": 8,
+        "restTime": 120
+      },
+      {
+        "name": "Lunges",
+        "weight": 49,
+        "avgWeight": 49,
+        "sets": 3,
+        "reps": 10,
+        "restTime": 90
+      }
+    ]
+  }
+]
