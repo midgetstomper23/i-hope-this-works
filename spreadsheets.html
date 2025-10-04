@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Spreadsheets - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="spreadsheets-page">
+    <div class="container">
+        <div class="spreadsheets-container">
+            <button class="back-btn" id="backButton">← Back to Analytics</button>
+            
+            <header>
+                <h1>Workout Spreadsheets</h1>
+                <p>Track and analyze your workout data in table format</p>
+            </header>
+
+            <!-- Spreadsheet Controls -->
+            <div class="spreadsheet-controls">
+                <div class="control-group">
+                    <label for="spreadsheetWorkoutSelect">Select Workout Plan:</label>
+                    <select id="spreadsheetWorkoutSelect">
+                        <option value="">-- Choose a workout plan --</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="dateRangeFilter">Date Range:</label>
+                    <input type="date" id="dateFrom">
+                    <span>to</span>
+                    <input type="date" id="dateTo">
+                    <button class="action-btn btn-secondary" id="applyDateFilter">Apply Filter</button>
+                </div>
+
+                <div class="control-group">
+                    <button class="action-btn btn-secondary" id="loadDemoData">Load Demo Data</button>
+                    <button class="action-btn btn-secondary" id="exportCSV">Export CSV</button>
+                </div>
+            </div>
+
+            <!-- Day Tabs Navigation -->
+            <div class="spreadsheet-tabs-container">
+                <h3>Workout Days:</h3>
+                <div class="spreadsheet-tabs" id="spreadsheetTabs">
+                    <div class="no-tabs-message">Select a workout plan to see days</div>
+                </div>
+            </div>
+
+            <!-- Spreadsheet Content -->
+            <div class="spreadsheet-content-area">
+                <div class="spreadsheet-header">
+                    <h3 id="currentDayTitle">Select a day to view data</h3>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="table">📊 Table View</button>
+                        <button class="view-btn" data-view="stats">📈 Statistics</button>
+                    </div>
+                </div>
+
+                <!-- Table View -->
+                <div class="table-view active" id="tableView">
+                    <div class="table-container">
+                        <table id="workoutSpreadsheet">
+                            <thead id="spreadsheetHeader">
+                                <tr>
+                                    <th colspan="10" class="no-data-message">Select a workout day to view data</th>
+                                </tr>
+                            </thead>
+                            <tbody id="spreadsheetBody">
+                                <!-- Data will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Statistics View -->
+                <div class="stats-view" id="statsView">
+                    <div class="stats-container" id="spreadsheetStats">
+                        <div class="no-data-message">Select a workout day to view statistics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="spreadsheet-summary" id="spreadsheetSummary">
+                <div class="summary-item">
+                    <span class="summary-value" id="totalWorkouts">0</span>
+                    <span class="summary-label">Total Workouts</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-value" id="totalExercises">0</span>
+                    <span class="summary-label">Exercises Tracked</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-value" id="dateRange">-</span>
+                    <span class="summary-label">Date Range</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item">
+            <i>📅</i>
+            <span>Home</span>
+        </a>
+        <a href="workoutbuilder.html" class="nav-item">
+            <i>🏋️</i>
+            <span>Workout Builder</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+            <i>📈</i>
+            <span>Analytics</span>
+        </a>
+        <a href="spreadsheets.html" class="nav-item active">
+            <i>📋</i>
+            <span>Spreadsheets</span>
+        </a>
+        <a href="progressive.html" class="nav-item">
+            <i>⚙️</i>
+            <span>Progressive</span>
+        </a>
+    </div>
+
+    <script src="spreadsheets.js"></script>
+</body>
+</html>

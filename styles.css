@@ -2124,3 +2124,375 @@ input, select, textarea {
         flex-direction: column;
     }
 }
+/* Spreadsheets Page Styles */
+.spreadsheets-page {
+    background: #f8f9fa;
+}
+
+.spreadsheets-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.spreadsheet-controls {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.control-group select,
+.control-group input {
+    padding: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.control-group select:focus,
+.control-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.control-group .action-btn {
+    margin-top: 5px;
+}
+
+.spreadsheet-tabs-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.spreadsheet-tabs-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.spreadsheet-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.day-tab {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    min-width: 120px;
+    text-align: center;
+}
+
+.day-tab.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.day-tab:hover:not(.active) {
+    background: #e9ecef;
+    border-color: #3498db;
+}
+
+.no-tabs-message {
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+}
+
+.spreadsheet-content-area {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.spreadsheet-header {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spreadsheet-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.view-options {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 8px 16px;
+    background: #e9ecef;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+.table-view,
+.stats-view {
+    display: none;
+    padding: 0;
+}
+
+.table-view.active,
+.stats-view.active {
+    display: block;
+}
+
+.table-container {
+    max-height: 500px;
+    overflow: auto;
+}
+
+#workoutSpreadsheet {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#workoutSpreadsheet th {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 12px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #34495e;
+    font-weight: 600;
+}
+
+#workoutSpreadsheet td {
+    padding: 12px;
+    border-bottom: 1px solid #ecf0f1;
+    border-right: 1px solid #ecf0f1;
+}
+
+#workoutSpreadsheet tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+#workoutSpreadsheet tr:hover {
+    background: #e3f2fd;
+}
+
+#workoutSpreadsheet th:last-child,
+#workoutSpreadsheet td:last-child {
+    border-right: none;
+}
+
+.stats-container {
+    padding: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spreadsheet-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.summary-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3498db;
+    display: block;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.no-data-message {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .spreadsheets-container {
+        padding: 10px;
+    }
+    
+    .spreadsheet-controls {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .spreadsheet-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .view-options {
+        justify-content: center;
+    }
+    
+    .table-container {
+        max-height: 400px;
+    }
+    
+    #workoutSpreadsheet {
+        font-size: 12px;
+    }
+    
+    .spreadsheet-tabs {
+        justify-content: center;
+    }
+    
+    .day-tab {
+        min-width: 100px;
+        padding: 10px 15px;
+    }
+}
+/* Quick Links Styles */
+.quick-links {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quick-links h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.link-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    min-width: 250px;
+}
+
+.link-card:hover {
+    background: #e3f2fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.link-icon {
+    font-size: 32px;
+    margin-right: 15px;
+}
+
+.link-content h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.link-content p {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Make the analytics steps more prominent */
+.analytics-step {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.step-title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}

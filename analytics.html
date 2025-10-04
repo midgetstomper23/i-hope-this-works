@@ -16,9 +16,12 @@
                 <p>Track your progress and performance over time</p>
             </header>
 
+            <!-- Analytics Sections - REMOVED THE REDUNDANT CARDS -->
+            <!-- Just show the charts workflow directly -->
+
             <!-- Step 1: Workout Selection -->
             <div class="analytics-step" id="step1">
-                <h2 class="step-title">Select a Workout Plan</h2>
+                <h2 class="step-title">Select a Workout Plan to Analyze</h2>
                 <div class="workout-list" id="workout-list">
                     <p class="no-data">Loading workout plans...</p>
                 </div>
@@ -26,7 +29,7 @@
 
             <!-- Step 2: Day Selection -->
             <div class="analytics-step" id="step2" style="display: none;">
-                <h2 class="step-title">Select a Day</h2>
+                <h2 class="step-title">Select a Day to Analyze</h2>
                 <div class="day-list" id="day-list">
                     <!-- Days will be populated here -->
                 </div>
@@ -35,7 +38,7 @@
 
             <!-- Step 3: Analytics Dashboard -->
             <div class="analytics-step" id="step3" style="display: none;">
-                <h2 class="step-title">Exercise Progress</h2>
+                <h2 class="step-title">Exercise Progress Analytics</h2>
                 
                 <div class="metrics-selector">
                     <label for="metric-select">Show:</label>
@@ -58,6 +61,20 @@
 
                 <button class="action-btn btn-secondary" id="backToDays">← Back to Days</button>
             </div>
+
+            <!-- Quick Links Section -->
+            <div class="quick-links">
+                <h3>Other Analytics Tools</h3>
+                <div class="link-cards">
+                    <a href="spreadsheets.html" class="link-card">
+                        <div class="link-icon">📋</div>
+                        <div class="link-content">
+                            <h4>Workout Spreadsheets</h4>
+                            <p>View your data in table format</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -75,10 +92,15 @@
             <i>📈</i>
             <span>Analytics</span>
         </a>
+        <a href="spreadsheets.html" class="nav-item">
+            <i>📋</i>
+            <span>Spreadsheets</span>
+        </a>
         <a href="progressive.html" class="nav-item">
-    <i>⚙️</i>
-    <span>Progressive</span>
-</a>
+            <i>⚙️</i>
+            <span>Progressive</span>
+        </a>
+    </div>
 
     <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
