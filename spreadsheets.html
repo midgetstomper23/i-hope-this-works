@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Spreadsheets - Fitness Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .completion-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .completion-badge.completed {
+            background: #2ecc71;
+            color: white;
+        }
+        .completion-badge.missed {
+            background: #e74c3c;
+            color: white;
+        }
+        .progression-up {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .year-tab {
+            min-width: 150px;
+        }
+        .stat-sublabel {
+            font-size: 0.8em;
+            color: #95a5a6;
+            margin-top: 4px;
+        }
+    </style>
 </head>
 <body class="spreadsheets-page">
     <div class="container">
@@ -13,7 +41,7 @@
             
             <header>
                 <h1>Workout Spreadsheets</h1>
-                <p>Track and analyze your workout data in table format</p>
+                <p>Track and analyze your workout data by year</p>
             </header>
 
             <!-- Spreadsheet Controls -->
@@ -24,33 +52,19 @@
                         <option value="">-- Choose a workout plan --</option>
                     </select>
                 </div>
-                
-                <div class="control-group">
-                    <label for="dateRangeFilter">Date Range:</label>
-                    <input type="date" id="dateFrom">
-                    <span>to</span>
-                    <input type="date" id="dateTo">
-                    <button class="action-btn btn-secondary" id="applyDateFilter">Apply Filter</button>
-                </div>
-
-                <div class="control-group">
-                    <button class="action-btn btn-secondary" id="loadDemoData">Load Demo Data</button>
-                    <button class="action-btn btn-secondary" id="exportCSV">Export CSV</button>
-                </div>
             </div>
 
-            <!-- Day Tabs Navigation -->
+            <!-- Year Tabs Navigation -->
             <div class="spreadsheet-tabs-container">
-                <h3>Workout Days:</h3>
                 <div class="spreadsheet-tabs" id="spreadsheetTabs">
-                    <div class="no-tabs-message">Select a workout plan to see days</div>
+                    <div class="no-tabs-message">Select a workout plan to see years</div>
                 </div>
             </div>
 
             <!-- Spreadsheet Content -->
             <div class="spreadsheet-content-area">
                 <div class="spreadsheet-header">
-                    <h3 id="currentDayTitle">Select a day to view data</h3>
+                    <h3 id="currentDayTitle">Select a workout to view data</h3>
                     <div class="view-options">
                         <button class="view-btn active" data-view="table">📊 Table View</button>
                         <button class="view-btn" data-view="stats">📈 Statistics</button>
@@ -63,7 +77,7 @@
                         <table id="workoutSpreadsheet">
                             <thead id="spreadsheetHeader">
                                 <tr>
-                                    <th colspan="10" class="no-data-message">Select a workout day to view data</th>
+                                    <th colspan="10" class="no-data-message">Select a workout plan to view data</th>
                                 </tr>
                             </thead>
                             <tbody id="spreadsheetBody">
@@ -76,7 +90,7 @@
                 <!-- Statistics View -->
                 <div class="stats-view" id="statsView">
                     <div class="stats-container" id="spreadsheetStats">
-                        <div class="no-data-message">Select a workout day to view statistics</div>
+                        <div class="no-data-message">Select a workout plan to view statistics</div>
                     </div>
                 </div>
             </div>

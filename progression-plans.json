@@ -86,5 +86,203 @@
     },
     "startDate": "2025-09-19",
     "createdAt": "2025-09-19T05:57:44.690Z"
+  },
+  {
+    "id": "progression-1759736973388",
+    "workoutId": "plan-demo-ppl",
+    "workoutName": "Push Pull Legs Split",
+    "dayId": "day-push-demo",
+    "dayName": "Push Day",
+    "exercises": {
+      "Bench Press": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 135,
+        "currentValue": 135,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Overhead Press": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 95,
+        "currentValue": 95,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Incline Dumbbell Press": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 60,
+        "currentValue": 60,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Lateral Raises": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 20,
+        "currentValue": 20,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Tricep Dips": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 0,
+        "currentValue": 0,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      }
+    },
+    "startDate": "2022-10-04",
+    "createdAt": "2025-10-06T07:49:33.388Z"
+  },
+  {
+    "id": "progression-1759736987218",
+    "workoutId": "plan-demo-ppl",
+    "workoutName": "Push Pull Legs Split",
+    "dayId": "day-pull-demo",
+    "dayName": "Pull Day",
+    "exercises": {
+      "Deadlift": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 225,
+        "currentValue": 225,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Pull-ups": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 0,
+        "currentValue": 0,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Barbell Rows": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 135,
+        "currentValue": 135,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Face Pulls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 50,
+        "currentValue": 50,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Bicep Curls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 30,
+        "currentValue": 30,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      }
+    },
+    "startDate": "2022-10-04",
+    "createdAt": "2025-10-06T07:49:47.218Z"
+  },
+  {
+    "id": "progression-1759736997394",
+    "workoutId": "plan-demo-ppl",
+    "workoutName": "Push Pull Legs Split",
+    "dayId": "day-legs-demo",
+    "dayName": "Leg Day",
+    "exercises": {
+      "Squats": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 185,
+        "currentValue": 185,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Romanian Deadlift": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 135,
+        "currentValue": 135,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Leg Press": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 270,
+        "currentValue": 270,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Leg Curls": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 80,
+        "currentValue": 80,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      },
+      "Calf Raises": {
+        "variable": "weight",
+        "increaseAmount": 5,
+        "intervalWeeks": 2,
+        "startingValue": 100,
+        "currentValue": 100,
+        "startDate": "2022-10-04",
+        "nextIncreaseDate": "2022-10-18",
+        "lastIncreased": null,
+        "enabled": true
+      }
+    },
+    "startDate": "2022-10-04",
+    "createdAt": "2025-10-06T07:49:57.394Z"
   }
 ]

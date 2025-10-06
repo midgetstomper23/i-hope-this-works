@@ -56,7 +56,7 @@ ipcMain.handle('read-workout-plans', async () => {
       const data = fs.readFileSync(dataPath, 'utf8');
       return JSON.parse(data);
     }
-    return []; // Return empty array if no file exists
+    return [];
   } catch (error) {
     console.error('Error reading workout plans:', error);
     return [];

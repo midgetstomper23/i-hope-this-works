@@ -1,5 +1,9 @@
-// spreadsheets.js - COMPLETE FILE WITH BUILT-IN DEMO DATA
+// spreadsheets.js - Rewritten with year-folder system and Electron API
 console.log('📊 Spreadsheets page loaded');
+
+let selectedWorkout = null;
+let selectedYear = null;
+let workoutData = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('📋 Initializing spreadsheet page...');
@@ -9,205 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'analytics.html';
     });
     
-    document.getElementById('loadDemoData').addEventListener('click', loadDemoData);
-    document.getElementById('spreadsheetWorkoutSelect').addEventListener('change', loadWorkoutData);
-    document.getElementById('applyDateFilter').addEventListener('click', applyDateFilter);
-    document.getElementById('exportCSV').addEventListener('click', exportToCSV);
-    
-    // Set default dates
-    const today = new Date();
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(today.getDate() - 30);
-    document.getElementById('dateFrom').value = thirtyDaysAgo.toISOString().split('T')[0];
-    document.getElementById('dateTo').value = today.toISOString().split('T')[0];
+    document.getElementById('spreadsheetWorkoutSelect').addEventListener('change', handleWorkoutSelection);
     
     // Load initial data
     loadWorkoutPlans();
 });
 
-// DEMO DATA IS BUILT RIGHT INTO THIS FUNCTION
-async function loadDemoData() {
-    console.log('🎮 Loading demo data...');
-    
-    try {
-        // DEMO WORKOUT PLANS DATA
-        const demoPlans = [
-            {
-                id: "demo_plan_1",
-                name: "Demo Workout Plan",
-                schedule: [
-                    {
-                        dayId: "day-1757634610452",
-                        dayName: "LEG SEX MODE V1",
-                        icon: "🦵"
-                    },
-                    {
-                        dayId: "day-1757822976102", 
-                        dayName: "PULL DAY SEX V1",
-                        icon: "💪"
-                    }
-                ],
-                createdAt: "2024-01-01T00:00:00.000Z"
-            }
-        ];
-
-        // DEMO WORKOUT SESSIONS DATA (completed workouts with progression)
-        const demoData = [
-            {
-                id: "session-1",
-                workoutId: "demo_plan_1",
-                dayId: "day-1757634610452",
-                dayName: "LEG SEX MODE V1",
-                date: "2024-01-15",
-                duration: "45 minutes",
-                notes: "Great leg workout! Felt strong on squats.",
-                exercises: [
-                    {
-                        name: "Normal Squats",
-                        sets: 4,
-                        reps: 12,
-                        weight: 30,
-                        rest: 120
-                    },
-                    {
-                        name: "Calf Raises", 
-                        sets: 4,
-                        reps: 15,
-                        weight: 30,
-                        rest: 75
-                    },
-                    {
-                        name: "Bulgarian Split Squats",
-                        sets: 3,
-                        reps: 8,
-                        weight: 20,
-                        rest: 120
-                    }
-                ]
-            },
-            {
-                id: "session-2", 
-                workoutId: "demo_plan_1",
-                dayId: "day-1757822976102",
-                dayName: "PULL DAY SEX V1",
-                date: "2024-01-16",
-                duration: "50 minutes",
-                notes: "Back and biceps feeling pumped!",
-                exercises: [
-                    {
-                        name: "Rows",
-                        sets: 4,
-                        reps: 15,
-                        weight: 35,
-                        rest: 120
-                    },
-                    {
-                        name: "Dumbbell Curls",
-                        sets: 4,
-                        reps: 12,
-                        weight: 20,
-                        rest: 60
-                    },
-                    {
-                        name: "Face Pulls",
-                        sets: 4,
-                        reps: 25,
-                        weight: 60,
-                        rest: 60
-                    }
-                ]
-            },
-            {
-                id: "session-3",
-                workoutId: "demo_plan_1", 
-                dayId: "day-1757634610452",
-                dayName: "LEG SEX MODE V1",
-                date: "2024-01-22",
-                duration: "48 minutes",
-                notes: "Progressive overload achieved!",
-                exercises: [
-                    {
-                        name: "Normal Squats",
-                        sets: 4,
-                        reps: 12,
-                        weight: 35,  // Increased from 30 to 35
-                        rest: 120
-                    },
-                    {
-                        name: "Calf Raises",
-                        sets: 4, 
-                        reps: 15,
-                        weight: 35,  // Increased from 30 to 35
-                        rest: 75
-                    },
-                    {
-                        name: "Bulgarian Split Squats",
-                        sets: 3,
-                        reps: 8, 
-                        weight: 25,  // Increased from 20 to 25
-                        rest: 120
-                    }
-                ]
-            },
-            {
-                id: "session-4",
-                workoutId: "demo_plan_1",
-                dayId: "day-1757822976102",
-                dayName: "PULL DAY SEX V1",
-                date: "2024-01-23",
-                duration: "52 minutes", 
-                notes: "Strength increasing steadily",
-                exercises: [
-                    {
-                        name: "Rows",
-                        sets: 4,
-                        reps: 15,
-                        weight: 40,  // Increased from 35 to 40
-                        rest: 120
-                    },
-                    {
-                        name: "Dumbbell Curls",
-                        sets: 4,
-                        reps: 12,
-                        weight: 25,  // Increased from 20 to 25
-                        rest: 60
-                    },
-                    {
-                        name: "Face Pulls",
-                        sets: 4,
-                        reps: 25,
-                        weight: 65,  // Increased from 60 to 65
-                        rest: 60
-                    }
-                ]
-            }
-        ];
-        
-        // Save to localStorage
-        localStorage.setItem('workoutPlans', JSON.stringify(demoPlans));
-        localStorage.setItem('workoutData', JSON.stringify(demoData));
-        
-        console.log('✅ DEMO DATA SAVED!');
-        console.log('Workout Plans:', demoPlans);
-        console.log('Workout Sessions:', demoData);
-        
-        // Reload the interface
-        loadWorkoutPlans();
-        
-        showNotification('Demo data loaded! Select "Demo Workout Plan" to view your workout history.', 'success');
-        
-    } catch (error) {
-        console.error('Error loading demo data:', error);
-        showNotification('Error loading demo data', 'error');
-    }
-}
-
-function loadWorkoutPlans() {
+async function loadWorkoutPlans() {
     console.log('🔄 Loading workout plans...');
     
     try {
-        const savedPlans = localStorage.getItem('workoutPlans');
-        const workoutPlans = savedPlans ? JSON.parse(savedPlans) : [];
+        let workoutPlans = [];
+        
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutPlans) {
+            workoutPlans = await window.fitnessAppAPI.readWorkoutPlans();
+        } else {
+            const savedPlans = localStorage.getItem('workoutPlans');
+            workoutPlans = savedPlans ? JSON.parse(savedPlans) : [];
+        }
         
         console.log('📋 Found workout plans:', workoutPlans);
         
@@ -215,14 +38,11 @@ function loadWorkoutPlans() {
         select.innerHTML = '<option value="">-- Choose a workout plan --</option>';
         
         if (workoutPlans.length === 0) {
-            console.log('No workout plans found');
-            document.getElementById('spreadsheetTabs').innerHTML = 
-                '<div class="no-tabs-message">No workout plans found. Click "Load Demo Data" to get started!</div>';
+            showMessage('No workout plans found. Create one in Workout Builder first.');
             return;
         }
         
         workoutPlans.forEach(plan => {
-            console.log('➕ Adding plan:', plan.name);
             const option = document.createElement('option');
             option.value = plan.id;
             option.textContent = plan.name;
@@ -231,12 +51,12 @@ function loadWorkoutPlans() {
         
     } catch (error) {
         console.error('Error loading workout plans:', error);
+        showMessage('Error loading workout plans', 'error');
     }
 }
 
-function loadWorkoutData() {
+async function handleWorkoutSelection() {
     const workoutId = document.getElementById('spreadsheetWorkoutSelect').value;
-    console.log('📥 Loading data for workout:', workoutId);
     
     if (!workoutId) {
         resetDisplay();
@@ -244,157 +64,260 @@ function loadWorkoutData() {
     }
     
     try {
-        const savedData = localStorage.getItem('workoutData');
-        const allWorkoutData = savedData ? JSON.parse(savedData) : [];
+        // Load workout plan
+        let workoutPlans = [];
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutPlans) {
+            workoutPlans = await window.fitnessAppAPI.readWorkoutPlans();
+        } else {
+            const saved = localStorage.getItem('workoutPlans');
+            workoutPlans = saved ? JSON.parse(saved) : [];
+        }
         
-        console.log('📊 All workout data:', allWorkoutData);
+        selectedWorkout = workoutPlans.find(p => p.id === workoutId);
         
-        // Filter by workout ID and date range
-        const dateFrom = document.getElementById('dateFrom').value;
-        const dateTo = document.getElementById('dateTo').value;
+        if (!selectedWorkout) {
+            showMessage('Workout plan not found', 'error');
+            return;
+        }
         
-        const filteredData = allWorkoutData.filter(entry => {
-            const matchesWorkout = entry.workoutId === workoutId;
-            if (!matchesWorkout) return false;
-            
-            if (dateFrom || dateTo) {
-                const entryDate = new Date(entry.date);
-                const fromDate = dateFrom ? new Date(dateFrom) : null;
-                const toDate = dateTo ? new Date(dateTo) : null;
-                if (toDate) toDate.setHours(23, 59, 59);
-                
-                const afterFrom = !fromDate || entryDate >= fromDate;
-                const beforeTo = !toDate || entryDate <= toDate;
-                
-                return afterFrom && beforeTo;
-            }
-            
-            return true;
-        });
+        // Load workout history for this plan
+        await loadWorkoutHistory(workoutId);
         
-        console.log('🎯 Filtered data:', filteredData);
-        displayWorkoutData(filteredData);
+        // Display year folders
+        displayYearFolders();
         
     } catch (error) {
-        console.error('Error loading workout data:', error);
+        console.error('Error handling workout selection:', error);
+        showMessage('Error loading workout data', 'error');
     }
 }
 
-function displayWorkoutData(workoutData) {
-    console.log('🖥️ Displaying workout data:', workoutData);
+async function loadWorkoutHistory(workoutId) {
+    try {
+        let history = [];
+        let workoutDays = [];
+        
+        // Load history
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutHistory) {
+            history = await window.fitnessAppAPI.readWorkoutHistory();
+        } else {
+            const saved = localStorage.getItem('workoutHistory');
+            history = saved ? JSON.parse(saved) : [];
+        }
+        
+        // Load workout days to get day names
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readWorkoutData) {
+            workoutDays = await window.fitnessAppAPI.readWorkoutData();
+        } else {
+            const saved = localStorage.getItem('workoutData');
+            workoutDays = saved ? JSON.parse(saved) : [];
+        }
+        
+        // Filter by workout ID and enrich with day names
+        workoutData = history.filter(session => session.workoutId === workoutId).map(session => {
+            // If dayName is missing, look it up from dayId
+            if (!session.dayName && session.dayId) {
+                const day = workoutDays.find(d => d.id === session.dayId);
+                if (day) {
+                    session.dayName = day.name;
+                }
+            }
+            return session;
+        });
+        
+        console.log(`Found ${workoutData.length} sessions for this workout`);
+        
+    } catch (error) {
+        console.error('Error loading workout history:', error);
+        workoutData = [];
+    }
+}
+
+function displayYearFolders() {
+    const container = document.getElementById('spreadsheetTabs');
     
-    if (!workoutData || workoutData.length === 0) {
+    if (workoutData.length === 0) {
+        container.innerHTML = '<div class="no-tabs-message">No workout sessions found for this plan.</div>';
         document.getElementById('spreadsheetBody').innerHTML = 
-            '<tr><td colspan="10" class="no-data-message">No workout data found.</td></tr>';
-        document.getElementById('spreadsheetTabs').innerHTML = 
-            '<div class="no-tabs-message">No data available for selected criteria</div>';
-        updateSummaryStats(0, 0, '-');
+            '<tr><td colspan="10" class="no-data-message">No data available</td></tr>';
         return;
     }
     
-    // Group by day
-    const daysData = {};
-    workoutData.forEach(entry => {
-        if (!daysData[entry.dayId]) {
-            daysData[entry.dayId] = {
-                dayName: entry.dayName,
-                entries: []
+    // Get workout start year
+    const startYear = new Date(selectedWorkout.createdAt).getFullYear();
+    const currentYear = new Date().getFullYear();
+    
+    // Create year folders
+    container.innerHTML = '<h3>Select Year:</h3>';
+    
+    for (let year = startYear; year <= currentYear; year++) {
+        const yearSessions = workoutData.filter(session => {
+            return new Date(session.date).getFullYear() === year;
+        });
+        
+        if (yearSessions.length > 0) {
+            const yearTab = document.createElement('button');
+            yearTab.className = 'day-tab year-tab';
+            yearTab.textContent = `${year} (${yearSessions.length} workouts)`;
+            yearTab.onclick = () => {
+                document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+                yearTab.classList.add('active');
+                displayYearData(year);
             };
+            container.appendChild(yearTab);
         }
-        daysData[entry.dayId].entries.push(entry);
-    });
-    
-    console.log('📁 Days data:', daysData);
-    
-    // Create day tabs
-    const tabsContainer = document.getElementById('spreadsheetTabs');
-    tabsContainer.innerHTML = '';
-    
-    Object.keys(daysData).forEach(dayId => {
-        const dayData = daysData[dayId];
-        const tab = document.createElement('button');
-        tab.className = 'day-tab';
-        tab.textContent = dayData.dayName;
-        tab.onclick = (e) => {
-            document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
-            e.target.classList.add('active');
-            showDayData(dayId, dayData);
-        };
-        tabsContainer.appendChild(tab);
-    });
-    
-    // Show first day
-    const firstDayId = Object.keys(daysData)[0];
-    if (firstDayId) {
-        const firstTab = tabsContainer.querySelector('.day-tab');
-        firstTab.classList.add('active');
-        showDayData(firstDayId, daysData[firstDayId]);
     }
     
-    // Update summary
-    updateSummaryStats(workoutData.length, countTotalExercises(workoutData), getDateRange(workoutData));
+    // Auto-select most recent year
+    const lastYear = currentYear;
+    displayYearData(lastYear);
+    document.querySelector('.year-tab:last-child')?.classList.add('active');
 }
 
-function showDayData(dayId, dayData) {
-    console.log('📅 Showing day data:', dayId, dayData);
+function displayYearData(year) {
+    selectedYear = year;
+    
+    // Filter sessions for this year
+    const yearSessions = workoutData.filter(session => {
+        return new Date(session.date).getFullYear() === year;
+    });
+    
+    console.log(`Displaying ${yearSessions.length} sessions for year ${year}`);
     
     // Update title
-    document.getElementById('currentDayTitle').textContent = dayData.dayName;
+    document.getElementById('currentDayTitle').textContent = `${selectedWorkout.name} - ${year}`;
     
     // Render table
-    renderSpreadsheetTable(dayData.entries);
+    renderSpreadsheetTable(yearSessions);
     
     // Calculate stats
-    calculateStatistics(dayData.entries);
+    calculateStatistics(yearSessions);
+    
+    // Update summary
+    updateSummaryStats(yearSessions);
 }
 
-function renderSpreadsheetTable(entries) {
+function renderSpreadsheetTable(sessions) {
     const header = document.getElementById('spreadsheetHeader');
     const body = document.getElementById('spreadsheetBody');
     
     header.innerHTML = '';
     body.innerHTML = '';
     
-    if (!entries || entries.length === 0) {
-        body.innerHTML = '<tr><td colspan="10" class="no-data-message">No data available</td></tr>';
+    if (!sessions || sessions.length === 0) {
+        body.innerHTML = '<tr><td colspan="10" class="no-data-message">No sessions for this year</td></tr>';
         return;
     }
     
+    // Group by day type
+    const dayGroups = {};
+    sessions.forEach(session => {
+        const dayName = session.dayName || 'Unknown Day';
+        if (!dayGroups[dayName]) {
+            dayGroups[dayName] = [];
+        }
+        dayGroups[dayName].push(session);
+    });
+    
+    // Remove old day tabs if they exist
+    const oldTabs = document.getElementById('dayTypeTabs');
+    if (oldTabs) oldTabs.remove();
+    
+    // Create a tab system for day types
+    const dayTabs = document.createElement('div');
+    dayTabs.id = 'dayTypeTabs';
+    dayTabs.style.cssText = 'display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;';
+    
+    Object.keys(dayGroups).forEach((dayName, index) => {
+        const tab = document.createElement('button');
+        tab.className = 'day-tab';
+        tab.textContent = `${dayName} (${dayGroups[dayName].length})`;
+        tab.onclick = (e) => {
+            document.querySelectorAll('#dayTypeTabs .day-tab').forEach(t => t.classList.remove('active'));
+            e.target.classList.add('active');
+            renderDayTable(dayGroups[dayName], dayName);
+        };
+        if (index === 0) tab.classList.add('active');
+        dayTabs.appendChild(tab);
+    });
+    
+    // Insert tabs before table
+    const tableContainer = document.querySelector('.table-container');
+    tableContainer.parentNode.insertBefore(dayTabs, tableContainer);
+    
+    // Show first day by default
+    renderDayTable(dayGroups[Object.keys(dayGroups)[0]], Object.keys(dayGroups)[0]);
+}
+
+function renderDayTable(sessions, dayName) {
+    const header = document.getElementById('spreadsheetHeader');
+    const body = document.getElementById('spreadsheetBody');
+    
+    header.innerHTML = '';
+    body.innerHTML = '';
+    
     // Get all unique exercises
     const exercises = new Set();
-    entries.forEach(entry => {
-        entry.exercises.forEach(ex => exercises.add(ex.name));
+    sessions.forEach(session => {
+        session.exercises.forEach(ex => exercises.add(ex.name));
     });
     
     // Create header
     const headerRow = document.createElement('tr');
-    headerRow.innerHTML = '<th>Date</th><th>Duration</th><th>Notes</th>';
+    headerRow.innerHTML = '<th>Date</th><th>Completed</th>';
     
     exercises.forEach(exName => {
-        headerRow.innerHTML += `<th>${exName} (Weight)</th><th>${exName} (Reps)</th><th>${exName} (Sets)</th>`;
+        headerRow.innerHTML += `<th colspan="3">${exName}</th>`;
     });
     
     header.appendChild(headerRow);
     
-    // Create rows
-    entries.forEach(entry => {
+    // Create subheader for weight/reps/sets
+    const subheaderRow = document.createElement('tr');
+    subheaderRow.innerHTML = '<th></th><th></th>';
+    
+    exercises.forEach(() => {
+        subheaderRow.innerHTML += '<th>Weight</th><th>Reps</th><th>Sets</th>';
+    });
+    
+    header.appendChild(subheaderRow);
+    
+    // Create rows sorted by date (newest first)
+    sessions.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    sessions.forEach((session, index) => {
         const row = document.createElement('tr');
+        const sessionDate = new Date(session.date);
+        const completed = true; // If it's in history, it was completed
+        
         row.innerHTML = `
-            <td>${formatDate(entry.date)}</td>
-            <td>${entry.duration || 'N/A'}</td>
-            <td>${entry.notes || ''}</td>
+            <td>${sessionDate.toLocaleDateString()}</td>
+            <td><span class="completion-badge ${completed ? 'completed' : 'missed'}">
+                ${completed ? '✓' : '✗'}
+            </span></td>
         `;
         
         exercises.forEach(exName => {
-            const exercise = entry.exercises.find(ex => ex.name === exName);
+            const exercise = session.exercises.find(ex => ex.name === exName);
             if (exercise) {
+                // Calculate progression from previous session
+                let progressionIndicator = '';
+                if (index < sessions.length - 1) {
+                    const prevSession = sessions[index + 1];
+                    const prevExercise = prevSession.exercises.find(ex => ex.name === exName);
+                    if (prevExercise && exercise.weight > prevExercise.weight) {
+                        const increase = exercise.weight - prevExercise.weight;
+                        progressionIndicator = ` <span class="progression-up">+${increase}</span>`;
+                    }
+                }
+                
                 row.innerHTML += `
-                    <td>${exercise.weight || ''}</td>
-                    <td>${exercise.reps || ''}</td>
-                    <td>${exercise.sets || ''}</td>
+                    <td>${exercise.weight || '-'}${progressionIndicator}</td>
+                    <td>${exercise.reps || '-'}</td>
+                    <td>${exercise.sets || '-'}</td>
                 `;
             } else {
-                row.innerHTML += '<td></td><td></td><td></td>';
+                row.innerHTML += '<td>-</td><td>-</td><td>-</td>';
             }
         });
         
@@ -402,10 +325,10 @@ function renderSpreadsheetTable(entries) {
     });
 }
 
-function calculateStatistics(entries) {
+function calculateStatistics(sessions) {
     const statsContainer = document.getElementById('spreadsheetStats');
     
-    if (!entries || entries.length === 0) {
+    if (!sessions || sessions.length === 0) {
         statsContainer.innerHTML = '<div class="no-data-message">No statistics available</div>';
         return;
     }
@@ -413,30 +336,44 @@ function calculateStatistics(entries) {
     let statsHTML = '<div class="stats-grid">';
     
     // Basic stats
+    const totalWorkouts = sessions.length;
+    const dateRange = `${formatDate(sessions[sessions.length - 1].date)} - ${formatDate(sessions[0].date)}`;
+    
     statsHTML += `
         <div class="stat-item">
-            <div class="stat-value">${entries.length}</div>
-            <div class="stat-label">Workouts</div>
+            <div class="stat-value">${totalWorkouts}</div>
+            <div class="stat-label">Total Workouts</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">${dateRange}</div>
+            <div class="stat-label">Date Range</div>
         </div>
     `;
     
-    // Exercise stats
+    // Exercise-specific stats
     const exerciseStats = {};
-    entries.forEach(entry => {
-        entry.exercises.forEach(ex => {
+    sessions.forEach(session => {
+        session.exercises.forEach(ex => {
             if (!exerciseStats[ex.name]) {
-                exerciseStats[ex.name] = { maxWeight: 0, count: 0 };
+                exerciseStats[ex.name] = {
+                    maxWeight: 0,
+                    minWeight: Infinity,
+                    totalSessions: 0
+                };
             }
             exerciseStats[ex.name].maxWeight = Math.max(exerciseStats[ex.name].maxWeight, ex.weight || 0);
-            exerciseStats[ex.name].count++;
+            exerciseStats[ex.name].minWeight = Math.min(exerciseStats[ex.name].minWeight, ex.weight || Infinity);
+            exerciseStats[ex.name].totalSessions++;
         });
     });
     
-    Object.keys(exerciseStats).forEach(exName => {
+    Object.entries(exerciseStats).forEach(([name, stats]) => {
+        const progression = stats.maxWeight - stats.minWeight;
         statsHTML += `
             <div class="stat-item">
-                <div class="stat-value">${exerciseStats[exName].maxWeight}</div>
-                <div class="stat-label">${exName} Max</div>
+                <div class="stat-value">${stats.maxWeight} lbs</div>
+                <div class="stat-label">${name} (Max)</div>
+                <div class="stat-sublabel">+${progression} lbs total gain</div>
             </div>
         `;
     });
@@ -445,65 +382,74 @@ function calculateStatistics(entries) {
     statsContainer.innerHTML = statsHTML;
 }
 
-function applyDateFilter() {
-    console.log('🔍 Applying date filter...');
-    loadWorkoutData();
-}
-
-function exportToCSV() {
-    showNotification('Export feature would run here', 'info');
+function updateSummaryStats(sessions) {
+    if (!sessions || sessions.length === 0) {
+        document.getElementById('totalWorkouts').textContent = '0';
+        document.getElementById('totalExercises').textContent = '0';
+        document.getElementById('dateRange').textContent = '-';
+        return;
+    }
+    
+    const totalWorkouts = sessions.length;
+    const uniqueExercises = new Set();
+    sessions.forEach(session => {
+        session.exercises.forEach(ex => uniqueExercises.add(ex.name));
+    });
+    
+    const dates = sessions.map(s => new Date(s.date)).sort((a, b) => a - b);
+    const dateRange = `${formatDate(dates[0])} - ${formatDate(dates[dates.length - 1])}`;
+    
+    document.getElementById('totalWorkouts').textContent = totalWorkouts;
+    document.getElementById('totalExercises').textContent = uniqueExercises.size;
+    document.getElementById('dateRange').textContent = dateRange;
 }
 
 function formatDate(dateString) {
     return new Date(dateString).toLocaleDateString('en-US', {
         year: 'numeric',
-        month: 'short', 
+        month: 'short',
         day: 'numeric'
     });
 }
 
 function resetDisplay() {
+    document.getElementById('spreadsheetTabs').innerHTML = '<div class="no-tabs-message">Select a workout plan</div>';
     document.getElementById('spreadsheetBody').innerHTML = 
         '<tr><td colspan="10" class="no-data-message">Select a workout plan</td></tr>';
-    document.getElementById('spreadsheetTabs').innerHTML = 
-        '<div class="no-tabs-message">Select a workout plan</div>';
     document.getElementById('spreadsheetStats').innerHTML = 
         '<div class="no-data-message">No statistics available</div>';
-    updateSummaryStats(0, 0, '-');
+    document.getElementById('totalWorkouts').textContent = '0';
+    document.getElementById('totalExercises').textContent = '0';
+    document.getElementById('dateRange').textContent = '-';
 }
 
-function countTotalExercises(workoutData) {
-    let total = 0;
-    workoutData.forEach(entry => {
-        total += entry.exercises ? entry.exercises.length : 0;
-    });
-    return total;
-}
-
-function getDateRange(workoutData) {
-    if (!workoutData.length) return '-';
-    
-    const dates = workoutData.map(entry => new Date(entry.date)).sort((a, b) => a - b);
-    const start = dates[0];
-    const end = dates[dates.length - 1];
-    
-    return `${formatDate(start)} - ${formatDate(end)}`;
-}
-
-function updateSummaryStats(totalWorkouts, totalExercises, dateRange) {
-    document.getElementById('totalWorkouts').textContent = totalWorkouts;
-    document.getElementById('totalExercises').textContent = totalExercises;
-    document.getElementById('dateRange').textContent = dateRange;
-}
-
-function showNotification(message, type = 'info') {
+function showMessage(message, type = 'info') {
     const notification = document.createElement('div');
     notification.textContent = message;
     notification.style.cssText = `
         position: fixed; top: 20px; right: 20px; padding: 12px 20px;
-        background: ${type === 'error' ? '#e74c3c' : type === 'success' ? '#2ecc71' : '#3498db'};
+        background: ${type === 'error' ? '#e74c3c' : '#3498db'};
         color: white; border-radius: 5px; z-index: 10000;
     `;
     document.body.appendChild(notification);
     setTimeout(() => notification.remove(), 3000);
 }
+
+// View toggle functionality
+document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        const view = this.dataset.view;
+        document.querySelectorAll('.table-view, .stats-view').forEach(v => {
+            v.classList.remove('active');
+        });
+        
+        if (view === 'table') {
+            document.getElementById('tableView').classList.add('active');
+        } else {
+            document.getElementById('statsView').classList.add('active');
+        }
+    });
+});
