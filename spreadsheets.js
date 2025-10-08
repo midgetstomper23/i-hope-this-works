@@ -1,8 +1,10 @@
-// spreadsheets.js - Rewritten with year-folder system and Electron API
+// spreadsheets.js - Updated for new single-exercise focused layout
 console.log('📊 Spreadsheets page loaded');
 
 let selectedWorkout = null;
 let selectedYear = null;
+let selectedExercise = null;
+let selectedDayType = null;
 let workoutData = [];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,6 +16,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     document.getElementById('spreadsheetWorkoutSelect').addEventListener('change', handleWorkoutSelection);
+    document.getElementById('exerciseSelect').addEventListener('change', handleExerciseSelection);
+    
+    // View toggle functionality
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const view = this.dataset.view;
+            document.querySelectorAll('.table-view, .stats-view').forEach(v => {
+                v.classList.remove('active');
+            });
+            
+            if (view === 'table') {
+                document.getElementById('tableView').classList.add('active');
+            } else {
+                document.getElementById('statsView').classList.add('active');
+                if (selectedExercise) {
+                    displayExerciseStatistics(selectedExercise);
+                }
+            }
+        });
+    });
     
     // Load initial data
     loadWorkoutPlans();
@@ -83,8 +108,12 @@ async function handleWorkoutSelection() {
         // Load workout history for this plan
         await loadWorkoutHistory(workoutId);
         
-        // Display year folders
-        displayYearFolders();
+        // Populate exercises dropdown
+        populateExercisesDropdown();
+        
+        // Display year and day type tabs
+        displayYearTabs();
+        displayDayTypeTabs();
         
     } catch (error) {
         console.error('Error handling workout selection:', error);
@@ -133,13 +162,31 @@ async function loadWorkoutHistory(workoutId) {
     }
 }
 
-function displayYearFolders() {
-    const container = document.getElementById('spreadsheetTabs');
+function populateExercisesDropdown() {
+    const exerciseSelect = document.getElementById('exerciseSelect');
+    exerciseSelect.innerHTML = '<option value="">-- Select an exercise --</option>';
+    
+    if (workoutData.length === 0) return;
+    
+    // Get all unique exercises
+    const exercises = new Set();
+    workoutData.forEach(session => {
+        session.exercises.forEach(ex => exercises.add(ex.name));
+    });
+    
+    exercises.forEach(exercise => {
+        const option = document.createElement('option');
+        option.value = exercise;
+        option.textContent = exercise;
+        exerciseSelect.appendChild(option);
+    });
+}
+
+function displayYearTabs() {
+    const container = document.getElementById('yearTabs');
     
     if (workoutData.length === 0) {
-        container.innerHTML = '<div class="no-tabs-message">No workout sessions found for this plan.</div>';
-        document.getElementById('spreadsheetBody').innerHTML = 
-            '<tr><td colspan="10" class="no-data-message">No data available</td></tr>';
+        container.innerHTML = '<div class="no-tabs-message">No workout sessions found</div>';
         return;
     }
     
@@ -147,8 +194,8 @@ function displayYearFolders() {
     const startYear = new Date(selectedWorkout.createdAt).getFullYear();
     const currentYear = new Date().getFullYear();
     
-    // Create year folders
-    container.innerHTML = '<h3>Select Year:</h3>';
+    // Create year tabs
+    container.innerHTML = '';
     
     for (let year = startYear; year <= currentYear; year++) {
         const yearSessions = workoutData.filter(session => {
@@ -158,60 +205,35 @@ function displayYearFolders() {
         if (yearSessions.length > 0) {
             const yearTab = document.createElement('button');
             yearTab.className = 'day-tab year-tab';
-            yearTab.textContent = `${year} (${yearSessions.length} workouts)`;
+            yearTab.textContent = `${year} (${yearSessions.length})`;
             yearTab.onclick = () => {
-                document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('#yearTabs .year-tab').forEach(t => t.classList.remove('active'));
                 yearTab.classList.add('active');
-                displayYearData(year);
+                selectedYear = year;
+                if (selectedExercise) {
+                    displayExerciseData(selectedExercise);
+                }
             };
             container.appendChild(yearTab);
         }
     }
     
     // Auto-select most recent year
-    const lastYear = currentYear;
-    displayYearData(lastYear);
-    document.querySelector('.year-tab:last-child')?.classList.add('active');
+    document.querySelector('#yearTabs .year-tab:last-child')?.classList.add('active');
+    selectedYear = currentYear;
 }
 
-function displayYearData(year) {
-    selectedYear = year;
+function displayDayTypeTabs() {
+    const container = document.getElementById('dayTypeTabs');
     
-    // Filter sessions for this year
-    const yearSessions = workoutData.filter(session => {
-        return new Date(session.date).getFullYear() === year;
-    });
-    
-    console.log(`Displaying ${yearSessions.length} sessions for year ${year}`);
-    
-    // Update title
-    document.getElementById('currentDayTitle').textContent = `${selectedWorkout.name} - ${year}`;
-    
-    // Render table
-    renderSpreadsheetTable(yearSessions);
-    
-    // Calculate stats
-    calculateStatistics(yearSessions);
-    
-    // Update summary
-    updateSummaryStats(yearSessions);
-}
-
-function renderSpreadsheetTable(sessions) {
-    const header = document.getElementById('spreadsheetHeader');
-    const body = document.getElementById('spreadsheetBody');
-    
-    header.innerHTML = '';
-    body.innerHTML = '';
-    
-    if (!sessions || sessions.length === 0) {
-        body.innerHTML = '<tr><td colspan="10" class="no-data-message">No sessions for this year</td></tr>';
+    if (workoutData.length === 0) {
+        container.innerHTML = '<div class="no-tabs-message">No workout sessions found</div>';
         return;
     }
     
     // Group by day type
     const dayGroups = {};
-    sessions.forEach(session => {
+    workoutData.forEach(session => {
         const dayName = session.dayName || 'Unknown Day';
         if (!dayGroups[dayName]) {
             dayGroups[dayName] = [];
@@ -219,208 +241,228 @@ function renderSpreadsheetTable(sessions) {
         dayGroups[dayName].push(session);
     });
     
-    // Remove old day tabs if they exist
-    const oldTabs = document.getElementById('dayTypeTabs');
-    if (oldTabs) oldTabs.remove();
+    // Create day type tabs
+    container.innerHTML = '';
     
-    // Create a tab system for day types
-    const dayTabs = document.createElement('div');
-    dayTabs.id = 'dayTypeTabs';
-    dayTabs.style.cssText = 'display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;';
-    
-    Object.keys(dayGroups).forEach((dayName, index) => {
-        const tab = document.createElement('button');
-        tab.className = 'day-tab';
-        tab.textContent = `${dayName} (${dayGroups[dayName].length})`;
-        tab.onclick = (e) => {
+    Object.keys(dayGroups).forEach(dayName => {
+        const dayTab = document.createElement('button');
+        dayTab.className = 'day-tab';
+        dayTab.textContent = `${dayName} (${dayGroups[dayName].length})`;
+        dayTab.onclick = () => {
             document.querySelectorAll('#dayTypeTabs .day-tab').forEach(t => t.classList.remove('active'));
-            e.target.classList.add('active');
-            renderDayTable(dayGroups[dayName], dayName);
+            dayTab.classList.add('active');
+            selectedDayType = dayName;
+            if (selectedExercise) {
+                displayExerciseData(selectedExercise);
+            }
         };
-        if (index === 0) tab.classList.add('active');
-        dayTabs.appendChild(tab);
+        container.appendChild(dayTab);
     });
     
-    // Insert tabs before table
-    const tableContainer = document.querySelector('.table-container');
-    tableContainer.parentNode.insertBefore(dayTabs, tableContainer);
-    
-    // Show first day by default
-    renderDayTable(dayGroups[Object.keys(dayGroups)[0]], Object.keys(dayGroups)[0]);
+    // Auto-select first day type
+    document.querySelector('#dayTypeTabs .day-tab:first-child')?.classList.add('active');
+    selectedDayType = Object.keys(dayGroups)[0];
 }
 
-function renderDayTable(sessions, dayName) {
-    const header = document.getElementById('spreadsheetHeader');
-    const body = document.getElementById('spreadsheetBody');
+function handleExerciseSelection() {
+    const exerciseName = document.getElementById('exerciseSelect').value;
+    selectedExercise = exerciseName;
     
-    header.innerHTML = '';
-    body.innerHTML = '';
+    if (!exerciseName) {
+        resetExerciseDisplay();
+        return;
+    }
     
-    // Get all unique exercises
-    const exercises = new Set();
-    sessions.forEach(session => {
-        session.exercises.forEach(ex => exercises.add(ex.name));
+    displayExerciseData(exerciseName);
+}
+
+function displayExerciseData(exerciseName) {
+    // Update title
+    document.getElementById('currentExerciseTitle').textContent = exerciseName;
+    
+    // Filter sessions based on selected year and day type
+    let filteredSessions = workoutData.filter(session => {
+        const sessionYear = new Date(session.date).getFullYear();
+        const matchesYear = !selectedYear || sessionYear === selectedYear;
+        const matchesDayType = !selectedDayType || session.dayName === selectedDayType;
+        return matchesYear && matchesDayType;
     });
     
-    // Create header
-    const headerRow = document.createElement('tr');
-    headerRow.innerHTML = '<th>Date</th><th>Completed</th>';
+    // Sort by date (newest first)
+    filteredSessions.sort((a, b) => new Date(b.date) - new Date(a.date));
     
-    exercises.forEach(exName => {
-        headerRow.innerHTML += `<th colspan="3">${exName}</th>`;
-    });
+    // Display exercise table
+    displayExerciseTable(exerciseName, filteredSessions);
     
-    header.appendChild(headerRow);
+    // Update exercise stats
+    updateExerciseStats(exerciseName, filteredSessions);
     
-    // Create subheader for weight/reps/sets
-    const subheaderRow = document.createElement('tr');
-    subheaderRow.innerHTML = '<th></th><th></th>';
+    // If in stats view, update statistics
+    if (document.querySelector('.view-btn[data-view="stats"]').classList.contains('active')) {
+        displayExerciseStatistics(exerciseName);
+    }
+}
+
+function displayExerciseTable(exerciseName, sessions) {
+    const tableBody = document.getElementById('exerciseTableBody');
     
-    exercises.forEach(() => {
-        subheaderRow.innerHTML += '<th>Weight</th><th>Reps</th><th>Sets</th>';
-    });
+    if (!sessions || sessions.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="7" class="no-data-message">No sessions found for selected filters</td></tr>';
+        return;
+    }
     
-    header.appendChild(subheaderRow);
-    
-    // Create rows sorted by date (newest first)
-    sessions.sort((a, b) => new Date(b.date) - new Date(a.date));
+    tableBody.innerHTML = '';
     
     sessions.forEach((session, index) => {
+        const exercise = session.exercises.find(ex => ex.name === exerciseName);
+        if (!exercise) return;
+        
         const row = document.createElement('tr');
         const sessionDate = new Date(session.date);
-        const completed = true; // If it's in history, it was completed
+        
+        // Calculate progression from previous session with same day type
+        let progression = '';
+        if (index < sessions.length - 1) {
+            const prevSession = sessions[index + 1];
+            const prevExercise = prevSession.exercises.find(ex => ex.name === exerciseName);
+            if (prevExercise && exercise.weight > prevExercise.weight) {
+                const increase = exercise.weight - prevExercise.weight;
+                progression = `<span class="progression-up">+${increase} lbs</span>`;
+            }
+        }
         
         row.innerHTML = `
             <td>${sessionDate.toLocaleDateString()}</td>
-            <td><span class="completion-badge ${completed ? 'completed' : 'missed'}">
-                ${completed ? '✓' : '✗'}
-            </span></td>
+            <td>${session.dayName || 'Unknown'}</td>
+            <td>${exercise.weight || '-'} lbs</td>
+            <td>${exercise.reps || '-'}</td>
+            <td>${exercise.sets || '-'}</td>
+            <td>${progression}</td>
+            <td><span class="completion-badge completed">✓</span></td>
         `;
         
-        exercises.forEach(exName => {
-            const exercise = session.exercises.find(ex => ex.name === exName);
-            if (exercise) {
-                // Calculate progression from previous session
-                let progressionIndicator = '';
-                if (index < sessions.length - 1) {
-                    const prevSession = sessions[index + 1];
-                    const prevExercise = prevSession.exercises.find(ex => ex.name === exName);
-                    if (prevExercise && exercise.weight > prevExercise.weight) {
-                        const increase = exercise.weight - prevExercise.weight;
-                        progressionIndicator = ` <span class="progression-up">+${increase}</span>`;
-                    }
-                }
-                
-                row.innerHTML += `
-                    <td>${exercise.weight || '-'}${progressionIndicator}</td>
-                    <td>${exercise.reps || '-'}</td>
-                    <td>${exercise.sets || '-'}</td>
-                `;
-            } else {
-                row.innerHTML += '<td>-</td><td>-</td><td>-</td>';
-            }
-        });
-        
-        body.appendChild(row);
+        tableBody.appendChild(row);
     });
 }
 
-function calculateStatistics(sessions) {
-    const statsContainer = document.getElementById('spreadsheetStats');
+function updateExerciseStats(exerciseName, sessions) {
+    const statsContainer = document.getElementById('exerciseStats');
     
     if (!sessions || sessions.length === 0) {
-        statsContainer.innerHTML = '<div class="no-data-message">No statistics available</div>';
+        statsContainer.innerHTML = '';
         return;
     }
     
-    let statsHTML = '<div class="stats-grid">';
+    // Calculate stats
+    const exerciseSessions = sessions.filter(session => 
+        session.exercises.some(ex => ex.name === exerciseName)
+    );
     
-    // Basic stats
-    const totalWorkouts = sessions.length;
-    const dateRange = `${formatDate(sessions[sessions.length - 1].date)} - ${formatDate(sessions[0].date)}`;
+    const weights = exerciseSessions
+        .map(session => {
+            const ex = session.exercises.find(e => e.name === exerciseName);
+            return ex ? ex.weight : 0;
+        })
+        .filter(weight => weight > 0);
     
-    statsHTML += `
-        <div class="stat-item">
-            <div class="stat-value">${totalWorkouts}</div>
-            <div class="stat-label">Total Workouts</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-value">${dateRange}</div>
-            <div class="stat-label">Date Range</div>
+    const maxWeight = weights.length > 0 ? Math.max(...weights) : 0;
+    const minWeight = weights.length > 0 ? Math.min(...weights) : 0;
+    const totalGain = maxWeight - minWeight;
+    
+    statsContainer.innerHTML = `
+        <div class="exercise-stat">Sessions: ${exerciseSessions.length}</div>
+        <div class="exercise-stat">Max Weight: ${maxWeight} lbs</div>
+        <div class="exercise-stat">Total Gain: +${totalGain} lbs</div>
+    `;
+}
+
+function displayExerciseStatistics(exerciseName) {
+    const statsContainer = document.getElementById('exerciseStatsView');
+    
+    // Filter sessions for this exercise
+    const exerciseSessions = workoutData.filter(session => 
+        session.exercises.some(ex => ex.name === exerciseName)
+    );
+    
+    if (exerciseSessions.length === 0) {
+        statsContainer.innerHTML = '<div class="no-data-message">No statistics available for this exercise</div>';
+        return;
+    }
+    
+    // Calculate detailed statistics
+    const weights = exerciseSessions
+        .map(session => {
+            const ex = session.exercises.find(e => e.name === exerciseName);
+            return ex ? ex.weight : 0;
+        })
+        .filter(weight => weight > 0);
+    
+    const maxWeight = Math.max(...weights);
+    const minWeight = Math.min(...weights);
+    const avgWeight = weights.reduce((a, b) => a + b, 0) / weights.length;
+    
+    // Group by month for trend analysis
+    const monthlyData = {};
+    exerciseSessions.forEach(session => {
+        const date = new Date(session.date);
+        const monthKey = `${date.getFullYear()}-${date.getMonth() + 1}`;
+        const exercise = session.exercises.find(e => e.name === exerciseName);
+        
+        if (!monthlyData[monthKey]) {
+            monthlyData[monthKey] = {
+                maxWeight: 0,
+                sessions: 0
+            };
+        }
+        
+        if (exercise && exercise.weight > monthlyData[monthKey].maxWeight) {
+            monthlyData[monthKey].maxWeight = exercise.weight;
+        }
+        monthlyData[monthKey].sessions++;
+    });
+    
+    let statsHTML = `
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">${exerciseSessions.length}</div>
+                <div class="stat-label">Total Sessions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">${maxWeight.toFixed(1)}</div>
+                <div class="stat-label">Max Weight (lbs)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">${minWeight.toFixed(1)}</div>
+                <div class="stat-label">Min Weight (lbs)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">${avgWeight.toFixed(1)}</div>
+                <div class="stat-label">Avg Weight (lbs)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">+${(maxWeight - minWeight).toFixed(1)}</div>
+                <div class="stat-label">Total Progression</div>
+            </div>
         </div>
     `;
     
-    // Exercise-specific stats
-    const exerciseStats = {};
-    sessions.forEach(session => {
-        session.exercises.forEach(ex => {
-            if (!exerciseStats[ex.name]) {
-                exerciseStats[ex.name] = {
-                    maxWeight: 0,
-                    minWeight: Infinity,
-                    totalSessions: 0
-                };
-            }
-            exerciseStats[ex.name].maxWeight = Math.max(exerciseStats[ex.name].maxWeight, ex.weight || 0);
-            exerciseStats[ex.name].minWeight = Math.min(exerciseStats[ex.name].minWeight, ex.weight || Infinity);
-            exerciseStats[ex.name].totalSessions++;
-        });
-    });
-    
-    Object.entries(exerciseStats).forEach(([name, stats]) => {
-        const progression = stats.maxWeight - stats.minWeight;
-        statsHTML += `
-            <div class="stat-item">
-                <div class="stat-value">${stats.maxWeight} lbs</div>
-                <div class="stat-label">${name} (Max)</div>
-                <div class="stat-sublabel">+${progression} lbs total gain</div>
-            </div>
-        `;
-    });
-    
-    statsHTML += '</div>';
     statsContainer.innerHTML = statsHTML;
 }
 
-function updateSummaryStats(sessions) {
-    if (!sessions || sessions.length === 0) {
-        document.getElementById('totalWorkouts').textContent = '0';
-        document.getElementById('totalExercises').textContent = '0';
-        document.getElementById('dateRange').textContent = '-';
-        return;
-    }
-    
-    const totalWorkouts = sessions.length;
-    const uniqueExercises = new Set();
-    sessions.forEach(session => {
-        session.exercises.forEach(ex => uniqueExercises.add(ex.name));
-    });
-    
-    const dates = sessions.map(s => new Date(s.date)).sort((a, b) => a - b);
-    const dateRange = `${formatDate(dates[0])} - ${formatDate(dates[dates.length - 1])}`;
-    
-    document.getElementById('totalWorkouts').textContent = totalWorkouts;
-    document.getElementById('totalExercises').textContent = uniqueExercises.size;
-    document.getElementById('dateRange').textContent = dateRange;
-}
-
-function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-    });
-}
-
 function resetDisplay() {
-    document.getElementById('spreadsheetTabs').innerHTML = '<div class="no-tabs-message">Select a workout plan</div>';
-    document.getElementById('spreadsheetBody').innerHTML = 
-        '<tr><td colspan="10" class="no-data-message">Select a workout plan</td></tr>';
-    document.getElementById('spreadsheetStats').innerHTML = 
+    document.getElementById('yearTabs').innerHTML = '<div class="no-tabs-message">Select a workout plan</div>';
+    document.getElementById('dayTypeTabs').innerHTML = '<div class="no-tabs-message">Select a workout plan</div>';
+    document.getElementById('exerciseSelect').innerHTML = '<option value="">-- Select an exercise --</option>';
+    resetExerciseDisplay();
+}
+
+function resetExerciseDisplay() {
+    document.getElementById('currentExerciseTitle').textContent = 'Select an exercise to view data';
+    document.getElementById('exerciseTableBody').innerHTML = 
+        '<tr><td colspan="7" class="no-data-message">Select an exercise to view data</td></tr>';
+    document.getElementById('exerciseStatsView').innerHTML = 
         '<div class="no-data-message">No statistics available</div>';
-    document.getElementById('totalWorkouts').textContent = '0';
-    document.getElementById('totalExercises').textContent = '0';
-    document.getElementById('dateRange').textContent = '-';
+    document.getElementById('exerciseStats').innerHTML = '';
 }
 
 function showMessage(message, type = 'info') {
@@ -434,22 +476,3 @@ function showMessage(message, type = 'info') {
     document.body.appendChild(notification);
     setTimeout(() => notification.remove(), 3000);
 }
-
-// View toggle functionality
-document.querySelectorAll('.view-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        
-        const view = this.dataset.view;
-        document.querySelectorAll('.table-view, .stats-view').forEach(v => {
-            v.classList.remove('active');
-        });
-        
-        if (view === 'table') {
-            document.getElementById('tableView').classList.add('active');
-        } else {
-            document.getElementById('statsView').classList.add('active');
-        }
-    });
-});

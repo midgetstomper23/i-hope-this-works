@@ -2496,3 +2496,68 @@ input, select, textarea {
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* Fix for spreadsheet white text */
+.spreadsheets-page .exercise-table,
+.spreadsheets-page .exercise-table th,
+.spreadsheets-page .exercise-table td {
+    color: #333 !important; /* Or whatever your normal text color is */
+}
+
+.spreadsheets-page .no-data-message {
+    color: #666 !important;
+}
+
+.spreadsheets-page .stat-value,
+.spreadsheets-page .stat-label {
+    color: inherit !important;
+}
+
+/* Fix for spreadsheet stat items */
+.spreadsheets-page .exercise-stat {
+    background: #3498db !important;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.spreadsheets-page .stat-item {
+    background: #3498db !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+}
+
+.spreadsheets-page .stat-value {
+    color: white !important;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.spreadsheets-page .stat-label {
+    color: white !important;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* If you want different colors for variety, you can use: */
+.spreadsheets-page .stat-item:nth-child(1) { background: #3498db !important; } /* Blue */
+.spreadsheets-page .stat-item:nth-child(2) { background: #2ecc71 !important; } /* Green */
+.spreadsheets-page .stat-item:nth-child(3) { background: #e74c3c !important; } /* Red */
+.spreadsheets-page .stat-item:nth-child(4) { background: #f39c12 !important; } /* Orange */
+.spreadsheets-page .stat-item:nth-child(5) { background: #9b59b6 !important; } /* Purple */
+/* Make exercise label same color as day types and years labels */
+.spreadsheets-page .exercise-selector label {
+    color: #2c3e50 !important;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 8px;
+    display: block;
+}
