@@ -7,69 +7,80 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="progressive-page">
-    <div class="container">
-        <div class="progressive-container">
+    <div class="progressive-page-container">
+        <!-- Header Section -->
+        <div class="progressive-header-section">
             <button class="back-btn" id="backButton">← Back to Home</button>
-            
-            <header>
-                <h1>Progressive Overload</h1>
-                <p>Set up automatic progression for your exercises</p>
-            </header>
+            <h1>Progressive Overload</h1>
+            <p>Set up automatic progression for your exercises</p>
+        </div>
 
-            <!-- Active Progression Plans -->
-            <div class="section-card">
-                <h2>Active Progression Plans</h2>
-                <div id="activePlans">
-                    <p class="no-data">No active progression plans. Create one below.</p>
+        <!-- Main Content Area -->
+        <div class="progressive-main-content">
+            <!-- Sidebar -->
+            <div class="progressive-sidebar">
+                <!-- Active Progression Plans -->
+                <div class="section-card">
+                    <h2>Active Progression Plans</h2>
+                    <div id="activePlans">
+                        <p class="no-data">No active progression plans. Create one below.</p>
+                    </div>
+                </div>
+
+                <!-- Progress Photos Section -->
+                <div class="section-card">
+                    <h2>Progress Photos</h2>
+                    <p>Track your visual progress over time</p>
+                    <button class="action-btn" id="managePhotosBtn">Manage Progress Photos</button>
                 </div>
             </div>
 
-            <!-- Setup New Progression -->
-            <div class="section-card">
-                <h2>Setup New Progression Plan</h2>
-                
-                <!-- Step 1: Select Workout -->
-                <div class="setup-step" id="step1">
-                    <h3>Step 1: Select Workout Plan</h3>
-                    <div class="workout-list" id="workoutList">
-                        <!-- Workouts will be populated here -->
+            <!-- Main View Area -->
+            <div class="progressive-view-area">
+                <div class="progressive-view-content">
+                    <!-- Setup New Progression -->
+                    <div class="section-card">
+                        <h2>Setup New Progression Plan</h2>
+                        
+                        <!-- Step 1: Select Workout -->
+                        <div class="setup-step" id="step1">
+                            <h3>Step 1: Select Workout Plan</h3>
+                            <div class="workout-list" id="workoutList">
+                                <!-- Workouts will be populated here -->
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Select Day -->
+                        <div class="setup-step" id="step2" style="display: none;">
+                            <h3>Step 2: Select Workout Day</h3>
+                            <div class="day-list" id="dayList">
+                                <!-- Days will be populated here -->
+                            </div>
+                            <div class="form-actions">
+                                <button class="action-btn btn-secondary" id="backToStep1">← Back to Workouts</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Configure Exercises -->
+                        <div class="setup-step" id="step3" style="display: none;">
+                            <h3>Step 3: Configure Exercise Progression</h3>
+                            
+                            <div class="info-box">
+                                <strong>Workout Start Date:</strong> <span id="workoutStartDate">-</span><br>
+                                <strong>Progression will begin from this date</strong>
+                            </div>
+                            
+                            <div id="exercisesConfig">
+                                <!-- Exercise configuration will be here -->
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="action-btn btn-secondary" id="backToStep2">← Back to Days</button>
+                                <button class="action-btn" id="saveProgressionBtn">Save Progression Plan</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Step 2: Select Day -->
-                <div class="setup-step" id="step2" style="display: none;">
-                    <h3>Step 2: Select Workout Day</h3>
-                    <div class="day-list" id="dayList">
-                        <!-- Days will be populated here -->
-                    </div>
-                    <button class="action-btn btn-secondary" id="backToStep1">← Back to Workouts</button>
-                </div>
-
-                <!-- Step 3: Configure Exercises -->
-                <div class="setup-step" id="step3" style="display: none;">
-                    <h3>Step 3: Configure Exercise Progression</h3>
-                    
-                    <div class="info-box">
-                        <strong>Workout Start Date:</strong> <span id="workoutStartDate">-</span><br>
-                        <strong>Progression will begin from this date</strong>
-                    </div>
-                    
-                    <div id="exercisesConfig">
-                        <!-- Exercise configuration will be here -->
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button class="action-btn btn-secondary" id="backToStep2">← Back to Days</button>
-                        <button class="action-btn" id="saveProgressionBtn">Save Progression Plan</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Progress Photos Section -->
-            <div class="section-card">
-                <h2>Progress Photos</h2>
-                <p>Track your visual progress over time</p>
-                <button class="action-btn" id="managePhotosBtn">Manage Progress Photos</button>
             </div>
         </div>
     </div>
@@ -99,18 +110,93 @@
     </div>
 
     <!-- Progress Photos Modal -->
-    <div class="modal" id="photosModal" style="display: none;">
-        <div class="modal-content" style="max-width: 900px;">
+    <div class="modal" id="photosModal">
+        <div class="modal-content" style="max-width: 900px; height: 80vh;">
             <div class="modal-header">
                 <h3>Progress Photos</h3>
                 <button class="modal-close" id="closePhotosModal">×</button>
             </div>
             <div class="modal-body">
-                <p>Progress photos feature coming soon...</p>
+                <div class="photos-toolbar">
+                    <button class="action-btn" id="createFolderBtn">📁 New Folder</button>
+                    <button class="action-btn" id="uploadPhotosBtn">📷 Upload Photos</button>
+                    <input type="file" id="photoUploadInput" accept="image/*" multiple style="display: none;">
+                    <div class="breadcrumb" id="breadcrumb">
+                        <span class="breadcrumb-item" data-folder-id="root">Progress Photos</span>
+                    </div>
+                </div>
+                
+                <div class="photos-container">
+                    <div class="folders-section">
+                        <h4>Folders</h4>
+                        <div class="folders-grid" id="foldersGrid">
+                            <!-- Folders will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="photos-section">
+                        <h4>Photos</h4>
+                        <div class="photos-grid" id="photosGrid">
+                            <!-- Photos will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Folder Modal -->
+    <div class="modal" id="createFolderModal">
+        <div class="modal-content" style="max-width: 400px;">
+            <div class="modal-header">
+                <h3 id="createFolderTitle">Create New Folder</h3>
+                <button class="modal-close" id="closeCreateFolderModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="folderNameInput">Folder Name:</label>
+                    <input type="text" id="folderNameInput" placeholder="Enter folder name" class="form-input">
+                </div>
+                <div class="form-actions">
+                    <button class="action-btn btn-secondary" id="cancelCreateFolder">Cancel</button>
+                    <button class="action-btn" id="confirmCreateFolder">Create Folder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Viewer Modal -->
+    <div class="modal" id="photoViewerModal">
+        <div class="modal-content" style="max-width: 90vw; max-height: 90vh;">
+            <div class="modal-header">
+                <h3 id="photoViewerTitle">Photo</h3>
+                <button class="modal-close" id="closePhotoViewerModal">×</button>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 0;">
+                <img id="viewerImage" src="" alt="Progress Photo" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+                <div class="photo-actions">
+                    <button class="action-btn btn-danger" id="deletePhotoBtn">Delete Photo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Plan Modal -->
+    <div class="modal" id="editPlanModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Progression Plan</h3>
+                <button class="modal-close" id="closeEditModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="editPlanContent">
+                    <!-- Edit form will be populated here -->
+                </div>
             </div>
         </div>
     </div>
 
     <script src="progressive.js"></script>
+    <script src="photos.js"></script>
 </body>
 </html>

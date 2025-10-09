@@ -1,8 +1,9 @@
-// progressive.js - Fixed with checkbox persistence and smart date handling
+// progressive.js - Updated with better layout and edit functionality
 
 let selectedWorkout = null;
 let selectedDay = null;
 let progressionSettings = {};
+let editingPlan = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Progressive Overload page loaded');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('saveProgressionBtn')?.addEventListener('click', saveProgressionPlan);
     document.getElementById('managePhotosBtn')?.addEventListener('click', openPhotosModal);
     document.getElementById('closePhotosModal')?.addEventListener('click', closePhotosModal);
+    document.getElementById('closeEditModal')?.addEventListener('click', closeEditModal);
     
     // Load data
     loadActivePlans();
@@ -53,27 +55,210 @@ function displayActivePlans(plans) {
     plans.forEach(plan => {
         const planCard = document.createElement('div');
         planCard.className = 'progression-plan-card';
-        planCard.style.cssText = 'background: #3d3d3d; padding: 15px; border-radius: 8px; margin-bottom: 15px;';
         
         const enabledExercises = Object.entries(plan.exercises).filter(([_, ex]) => ex.enabled);
         
         planCard.innerHTML = `
-            <h4>${plan.workoutName} - ${plan.dayName}</h4>
-            <p><strong>Start Date:</strong> ${new Date(plan.startDate).toLocaleDateString()}</p>
-            <p><strong>Active Exercises:</strong> ${enabledExercises.length}</p>
-            <div style="margin-top: 10px;">
+            <div class="plan-header">
+                <h4>${plan.workoutName} - ${plan.dayName}</h4>
+                <p class="plan-meta"><strong>Start Date:</strong> ${new Date(plan.startDate).toLocaleDateString()}</p>
+                <p class="plan-meta"><strong>Active Exercises:</strong> ${enabledExercises.length}</p>
+            </div>
+            
+            <div class="exercise-progression-list">
                 ${enabledExercises.map(([name, ex]) => `
-                    <div style="padding: 5px 0; border-bottom: 1px solid #555;">
-                        <strong>${name}:</strong> ${ex.variable} increases by ${ex.increaseAmount} every ${ex.intervalWeeks} weeks
-                        (Current: ${ex.currentValue})
+                    <div class="exercise-progression-item">
+                        <div class="exercise-name">${name}</div>
+                        <div class="exercise-details">
+                            ${ex.variable} increases by ${ex.increaseAmount} every ${ex.intervalWeeks} weeks
+                            <br><strong>Current:</strong> ${ex.currentValue} ${getVariableUnit(ex.variable)}
+                        </div>
                     </div>
                 `).join('')}
             </div>
-            <button class="action-btn btn-secondary" style="margin-top: 10px;" onclick="deletePlan('${plan.id}')">Delete Plan</button>
+            
+            <div class="plan-actions">
+                <button class="action-btn btn-secondary" onclick="editPlan('${plan.id}')">Edit Plan</button>
+                <button class="action-btn btn-danger" onclick="deletePlan('${plan.id}')">Delete Plan</button>
+            </div>
         `;
         
         container.appendChild(planCard);
     });
+}
+
+async function editPlan(planId) {
+    try {
+        let plans = [];
+        
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readProgressionPlans) {
+            plans = await window.fitnessAppAPI.readProgressionPlans();
+        } else {
+            const saved = localStorage.getItem('progressionPlans');
+            plans = saved ? JSON.parse(saved) : [];
+        }
+        
+        editingPlan = plans.find(p => p.id === planId);
+        
+        if (!editingPlan) {
+            showNotification('Plan not found', 'error');
+            return;
+        }
+        
+        displayEditModal(editingPlan);
+        
+    } catch (error) {
+        console.error('Error loading plan for editing:', error);
+        showNotification('Error loading plan', 'error');
+    }
+}
+
+function displayEditModal(plan) {
+    const container = document.getElementById('editPlanContent');
+    container.innerHTML = '';
+    
+    const exercises = Object.entries(plan.exercises);
+    
+    exercises.forEach(([name, ex]) => {
+        const exerciseCard = document.createElement('div');
+        exerciseCard.className = 'exercise-config';
+        
+        exerciseCard.innerHTML = `
+            <div class="exercise-header">
+                <h4>${name}</h4>
+                <label class="toggle-label">
+                    <input type="checkbox" class="enable-progression" data-exercise="${name}" ${ex.enabled ? 'checked' : ''}>
+                    Enable Progression
+                </label>
+            </div>
+            
+            <div class="progression-settings" style="display: ${ex.enabled ? 'block' : 'none'}">
+                <p><strong>Current Value:</strong> ${ex.currentValue} ${getVariableUnit(ex.variable)}</p>
+                
+                <div class="form-group">
+                    <label>Variable to Increase:</label>
+                    <select class="progression-variable" data-exercise="${name}">
+                        <option value="weight" ${ex.variable === 'weight' ? 'selected' : ''}>Weight</option>
+                        <option value="reps" ${ex.variable === 'reps' ? 'selected' : ''}>Reps</option>
+                        <option value="sets" ${ex.variable === 'sets' ? 'selected' : ''}>Sets</option>
+                        <option value="rest" ${ex.variable === 'rest' ? 'selected' : ''}>Rest Time</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Increase Amount:</label>
+                    <input type="number" min="0.5" step="0.5" value="${ex.increaseAmount}" 
+                           class="increase-amount" data-exercise="${name}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Increase Interval (weeks):</label>
+                    <input type="number" min="1" value="${ex.intervalWeeks}" 
+                           class="interval-weeks" data-exercise="${name}">
+                </div>
+            </div>
+        `;
+        
+        container.appendChild(exerciseCard);
+        
+        // Add toggle functionality
+        const checkbox = exerciseCard.querySelector('.enable-progression');
+        const settings = exerciseCard.querySelector('.progression-settings');
+        
+        checkbox.addEventListener('change', function() {
+            settings.style.display = this.checked ? 'block' : 'none';
+        });
+    });
+    
+    // Add save button
+    const saveButton = document.createElement('button');
+    saveButton.className = 'action-btn';
+    saveButton.textContent = 'Save Changes';
+    saveButton.onclick = () => saveEditedPlan(plan.id);
+    
+    container.appendChild(saveButton);
+    
+    // Show modal
+    document.getElementById('editPlanModal').style.display = 'flex';
+}
+
+async function saveEditedPlan(planId) {
+    try {
+        let plans = [];
+        
+        if (window.fitnessAppAPI && window.fitnessAppAPI.readProgressionPlans) {
+            plans = await window.fitnessAppAPI.readProgressionPlans();
+        } else {
+            const saved = localStorage.getItem('progressionPlans');
+            plans = saved ? JSON.parse(saved) : [];
+        }
+        
+        const planIndex = plans.findIndex(p => p.id === planId);
+        if (planIndex === -1) {
+            showNotification('Plan not found', 'error');
+            return;
+        }
+        
+        // Update exercises configuration
+        const updatedExercises = {};
+        
+        document.querySelectorAll('#editPlanContent .exercise-config').forEach(config => {
+            const checkbox = config.querySelector('.enable-progression');
+            const exerciseName = checkbox.dataset.exercise;
+            
+            if (checkbox.checked) {
+                const variable = config.querySelector('.progression-variable').value;
+                const increaseAmount = parseFloat(config.querySelector('.increase-amount').value);
+                const intervalWeeks = parseInt(config.querySelector('.interval-weeks').value);
+                
+                // Keep existing current value and dates
+                const existingExercise = plans[planIndex].exercises[exerciseName];
+                
+                updatedExercises[exerciseName] = {
+                    ...existingExercise,
+                    variable: variable,
+                    increaseAmount: increaseAmount,
+                    intervalWeeks: intervalWeeks,
+                    enabled: true
+                };
+            } else {
+                // Disable the exercise but keep the data
+                updatedExercises[exerciseName] = {
+                    ...plans[planIndex].exercises[exerciseName],
+                    enabled: false
+                };
+            }
+        });
+        
+        if (Object.keys(updatedExercises).filter(([_, ex]) => ex.enabled).length === 0) {
+            showNotification('Please enable at least one exercise', 'error');
+            return;
+        }
+        
+        // Update the plan
+        plans[planIndex].exercises = updatedExercises;
+        plans[planIndex].updatedAt = new Date().toISOString();
+        
+        // Save
+        if (window.fitnessAppAPI && window.fitnessAppAPI.saveProgressionPlans) {
+            await window.fitnessAppAPI.saveProgressionPlans(plans);
+        } else {
+            localStorage.setItem('progressionPlans', JSON.stringify(plans));
+        }
+        
+        showNotification('Progression plan updated!', 'success');
+        closeEditModal();
+        loadActivePlans();
+        
+    } catch (error) {
+        console.error('Error saving edited plan:', error);
+        showNotification('Error updating plan', 'error');
+    }
+}
+
+function closeEditModal() {
+    document.getElementById('editPlanModal').style.display = 'none';
+    editingPlan = null;
 }
 
 async function deletePlan(planId) {
@@ -136,7 +321,6 @@ function displayWorkoutPlans(plans) {
     plans.forEach(plan => {
         const card = document.createElement('div');
         card.className = 'workout-card';
-        card.style.cssText = 'background: #3d3d3d; padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer;';
         card.innerHTML = `
             <h4>${plan.name}</h4>
             <p>Created: ${new Date(plan.createdAt).toLocaleDateString()}</p>
@@ -194,11 +378,10 @@ function displayDays(days) {
     days.forEach(day => {
         const card = document.createElement('div');
         card.className = 'day-card';
-        card.style.cssText = 'background: #3d3d3d; padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer;';
         card.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <span style="font-size: 2rem;">${day.icon || '🏋️'}</span>
-                <div>
+            <div class="day-card-content">
+                <span class="day-icon">${day.icon || '🏋️'}</span>
+                <div class="day-info">
                     <h4>${day.name}</h4>
                     <p>${day.exercises.length} exercises</p>
                 </div>
@@ -227,20 +410,19 @@ function displayExerciseConfiguration(exercises) {
     exercises.forEach((exercise, index) => {
         const exerciseCard = document.createElement('div');
         exerciseCard.className = 'exercise-config';
-        exerciseCard.style.cssText = 'background: #3d3d3d; padding: 15px; border-radius: 8px; margin-bottom: 15px;';
         
         const exerciseId = `exercise-${index}`;
         
         exerciseCard.innerHTML = `
-            <div class="exercise-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div class="exercise-header">
                 <h4>${exercise.name}</h4>
-                <label class="toggle-label" style="cursor: pointer;">
+                <label class="toggle-label">
                     <input type="checkbox" class="enable-progression" data-exercise="${exercise.name}" id="${exerciseId}">
                     Enable Progression
                 </label>
             </div>
             
-            <div class="progression-settings" id="settings-${exerciseId}" style="display: none;">
+            <div class="progression-settings" id="settings-${exerciseId}">
                 <p><strong>Starting Value:</strong> ${exercise.weight} ${getVariableUnit('weight')}</p>
                 
                 <div class="form-group">
@@ -272,6 +454,9 @@ function displayExerciseConfiguration(exercises) {
         // Add toggle functionality
         const checkbox = exerciseCard.querySelector(`#${exerciseId}`);
         const settings = exerciseCard.querySelector(`#settings-${exerciseId}`);
+        
+        // Hide settings initially
+        settings.style.display = 'none';
         
         checkbox.addEventListener('change', function() {
             settings.style.display = this.checked ? 'block' : 'none';
@@ -421,6 +606,11 @@ function showStep(stepNumber) {
 
 function openPhotosModal() {
     document.getElementById('photosModal').style.display = 'flex';
+    
+    // Initialize the photos system
+    if (typeof window.loadCurrentFolder === 'function') {
+        window.loadCurrentFolder();
+    }
 }
 
 function closePhotosModal() {
@@ -439,5 +629,6 @@ function showNotification(message, type = 'info') {
     setTimeout(() => notification.remove(), 3000);
 }
 
-// Make deletePlan globally available
+// Make functions globally available
 window.deletePlan = deletePlan;
+window.editPlan = editPlan;
