@@ -36,6 +36,20 @@ function initializePhotosModal() {
     initializePhotosData();
 }
 
+
+function updateCurrentFolderHighlight() {
+    // Remove highlight from all folders
+    document.querySelectorAll('.folder-item').forEach(item => {
+        item.classList.remove('current-folder');
+    });
+    
+    // Highlight current folder if it exists in the grid
+    const currentFolderItem = document.querySelector(`.folder-item[data-folder-id="${currentFolderId}"]`);
+    if (currentFolderItem) {
+        currentFolderItem.classList.add('current-folder');
+    }
+}
+
 function initializePhotosData() {
     // Initialize folders if not exists
     if (!localStorage.getItem(FOLDERS_KEY)) {
@@ -71,6 +85,7 @@ function loadCurrentFolder() {
     updateBreadcrumb();
     displayFolders(folders.filter(folder => folder.parentId === currentFolderId));
     displayPhotos(photos.filter(photo => photo.folderId === currentFolderId));
+    updateCurrentFolderHighlight();
 }
 
 function getFolders() {

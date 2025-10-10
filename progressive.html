@@ -10,9 +10,17 @@
     <div class="progressive-page-container">
         <!-- Header Section -->
         <div class="progressive-header-section">
-            <button class="back-btn" id="backButton">← Back to Home</button>
-            <h1>Progressive Overload</h1>
-            <p>Set up automatic progression for your exercises</p>
+            <div class="header-top">
+                <button class="back-btn" id="backButton">← Back to Home</button>
+                <button class="photos-header-btn" id="photosHeaderBtn">
+                    <span class="btn-icon">🖼️</span>
+                    Progress Photos
+                </button>
+            </div>
+            <div class="header-main">
+                <h1>Progressive Overload</h1>
+                <p>Set up automatic progression for your exercises</p>
+            </div>
         </div>
 
         <!-- Main Content Area -->
@@ -21,17 +29,19 @@
             <div class="progressive-sidebar">
                 <!-- Active Progression Plans -->
                 <div class="section-card">
-                    <h2>Active Progression Plans</h2>
+                    <div class="plans-header">
+                        <h2>Active Progression Plans</h2>
+                        <div class="plans-navigation" id="plansNavigation" style="display: none;">
+                            <button class="nav-arrow" id="prevPlan">←</button>
+                            <span class="plan-counter">
+                                <span id="currentPlanIndex">1</span> / <span id="totalPlans">0</span>
+                            </span>
+                            <button class="nav-arrow" id="nextPlan">→</button>
+                        </div>
+                    </div>
                     <div id="activePlans">
                         <p class="no-data">No active progression plans. Create one below.</p>
                     </div>
-                </div>
-
-                <!-- Progress Photos Section -->
-                <div class="section-card">
-                    <h2>Progress Photos</h2>
-                    <p>Track your visual progress over time</p>
-                    <button class="action-btn" id="managePhotosBtn">Manage Progress Photos</button>
                 </div>
             </div>
 

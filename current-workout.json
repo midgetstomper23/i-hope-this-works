@@ -1,36 +1,36 @@
 {
-  "id": "workout-1756609574066",
-  "name": "generic workout",
+  "id": "plan-demo-ppl",
+  "name": "Push Pull Legs Split",
   "schedule": [
     {
-      "dayId": "day-1757822976102",
-      "dayName": "PULL DAY SEX V1",
+      "dayId": "day-push-demo",
+      "dayName": "Push Day",
       "icon": "💪"
     },
     {
-      "dayId": "day-1757634610452",
-      "dayName": "LEG SEX MODE V1",
+      "dayId": "day-pull-demo",
+      "dayName": "Pull Day",
+      "icon": "🔙"
+    },
+    {
+      "dayId": "day-legs-demo",
+      "dayName": "Leg Day",
       "icon": "🦵"
     },
     {
-      "dayId": "day-1757822976102",
-      "dayName": "PULL DAY SEX V1",
+      "dayId": "day-push-demo",
+      "dayName": "Push Day",
       "icon": "💪"
     },
     {
-      "dayId": null,
-      "dayName": "Rest Day",
-      "icon": "🛌"
+      "dayId": "day-pull-demo",
+      "dayName": "Pull Day",
+      "icon": "🔙"
     },
     {
-      "dayId": "day-1757634610452",
-      "dayName": "LEG SEX MODE V1",
+      "dayId": "day-legs-demo",
+      "dayName": "Leg Day",
       "icon": "🦵"
-    },
-    {
-      "dayId": "day-1757822976102",
-      "dayName": "PULL DAY SEX V1",
-      "icon": "💪"
     },
     {
       "dayId": null,
@@ -38,6 +38,6 @@
       "icon": "🛌"
     }
   ],
-  "createdAt": "2025-08-31T03:06:14.066Z",
-  "updatedAt": "2025-09-19T01:10:00.000Z"
+  "createdAt": "2022-10-04T12:00:00.000Z",
+  "updatedAt": "2022-10-04T12:00:00.000Z"
 }

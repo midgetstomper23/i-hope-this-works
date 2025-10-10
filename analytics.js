@@ -29,14 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     backToDaysBtn.addEventListener('click', showDaySelection);
     metricSelect.addEventListener('change', updateChart);
     
-    // FIXED: Demo data button event listener
-    const demoBtn = document.getElementById('generateDemoData');
-    if (demoBtn) {
-        demoBtn.addEventListener('click', generateDemoData);
-    } else {
-        console.error('Generate Demo Data button not found!');
-    }
-    
     // Load workout plans and history
     loadWorkoutPlans();
     loadWorkoutHistory();
@@ -118,7 +110,7 @@ function displayWorkoutPlans(workoutPlans) {
         workoutList.innerHTML = `
             <div class="no-data-message">
                 <p>No workout plans found.</p>
-                <p>Click "Generate Demo Data" to create sample workouts for testing analytics.</p>
+                <p>Create workout plans in the Workout Builder to see analytics.</p>
             </div>
         `;
         return;
@@ -266,120 +258,6 @@ function getDayPerformanceStats(dayId) {
 function updateChart() {
     const metric = metricSelect.value;
     renderProgressChart(metric);
-}
-
-// ===== FIXED DEMO DATA GENERATOR =====
-async function generateDemoData() {
-    console.log('🎮 Generating demo data for analytics...');
-    
-    try {
-        // Create comprehensive demo data specifically for analytics
-        const demoData = {
-            workoutPlans: [
-                {
-                    id: "demo_analytics_plan",
-                    name: "Demo Analytics Workout",
-                    schedule: [
-                        { dayId: "demo_chest_day", dayName: "Demo Chest Day", icon: "🏋️" },
-                        { dayId: "demo_back_day", dayName: "Demo Back Day", icon: "💪" },
-                        { dayId: "demo_legs_day", dayName: "Demo Legs Day", icon: "🦵" }
-                    ]
-                }
-            ],
-            workoutHistory: [
-                {
-                    id: "demo_1",
-                    workoutId: "demo_analytics_plan",
-                    dayId: "demo_chest_day",
-                    date: "2024-01-15",
-                    exercises: [
-                        { name: "Bench Press", avgWeight: 185, reps: 8, sets: 3, restTime: 90 },
-                        { name: "Incline Press", avgWeight: 155, reps: 8, sets: 3, restTime: 75 }
-                    ]
-                },
-                {
-                    id: "demo_2",
-                    workoutId: "demo_analytics_plan", 
-                    dayId: "demo_chest_day",
-                    date: "2024-01-22",
-                    exercises: [
-                        { name: "Bench Press", avgWeight: 195, reps: 8, sets: 3, restTime: 85 },
-                        { name: "Incline Press", avgWeight: 165, reps: 8, sets: 3, restTime: 70 }
-                    ]
-                },
-                {
-                    id: "demo_3",
-                    workoutId: "demo_analytics_plan",
-                    dayId: "demo_chest_day", 
-                    date: "2024-01-29",
-                    exercises: [
-                        { name: "Bench Press", avgWeight: 205, reps: 8, sets: 3, restTime: 80 },
-                        { name: "Incline Press", avgWeight: 175, reps: 8, sets: 3, restTime: 65 }
-                    ]
-                },
-                {
-                    id: "demo_4",
-                    workoutId: "demo_analytics_plan",
-                    dayId: "demo_back_day",
-                    date: "2024-01-16",
-                    exercises: [
-                        { name: "Deadlifts", avgWeight: 225, reps: 5, sets: 3, restTime: 120 },
-                        { name: "Pull-ups", avgWeight: 0, reps: 8, sets: 3, restTime: 90 }
-                    ]
-                },
-                {
-                    id: "demo_5",
-                    workoutId: "demo_analytics_plan", 
-                    dayId: "demo_back_day",
-                    date: "2024-01-23",
-                    exercises: [
-                        { name: "Deadlifts", avgWeight: 235, reps: 5, sets: 3, restTime: 115 },
-                        { name: "Pull-ups", avgWeight: 0, reps: 9, sets: 3, restTime: 85 }
-                    ]
-                },
-                {
-                    id: "demo_6",
-                    workoutId: "demo_analytics_plan",
-                    dayId: "demo_legs_day", 
-                    date: "2024-01-17",
-                    exercises: [
-                        { name: "Squats", avgWeight: 205, reps: 6, sets: 3, restTime: 100 },
-                        { name: "Leg Press", avgWeight: 315, reps: 10, sets: 3, restTime: 75 }
-                    ]
-                },
-                {
-                    id: "demo_7",
-                    workoutId: "demo_analytics_plan",
-                    dayId: "demo_legs_day",
-                    date: "2024-01-24",
-                    exercises: [
-                        { name: "Squats", avgWeight: 215, reps: 6, sets: 3, restTime: 95 },
-                        { name: "Leg Press", avgWeight: 335, reps: 10, sets: 3, restTime: 70 }
-                    ]
-                }
-            ]
-        };
-        
-        // Save to storage
-        if (window.fitnessAppAPI && window.fitnessAppAPI.saveWorkoutPlans) {
-            await window.fitnessAppAPI.saveWorkoutPlans(demoData.workoutPlans);
-            await window.fitnessAppAPI.saveWorkoutHistory(demoData.workoutHistory);
-        } else {
-            localStorage.setItem('workoutPlans', JSON.stringify(demoData.workoutPlans));
-            localStorage.setItem('workoutHistory', JSON.stringify(demoData.workoutHistory));
-        }
-        
-        console.log('✅ Demo data generated successfully!');
-        showNotification('Demo data generated! Now select "Demo Analytics Workout" from the list.', 'success');
-        
-        // RELOAD THE DATA TO SHOW THE NEW WORKOUT PLAN
-        loadWorkoutPlans();
-        loadWorkoutHistory();
-        
-    } catch (error) {
-        console.error('Error generating demo data:', error);
-        showNotification('Error generating demo data', 'error');
-    }
 }
 
 // Render the progress chart with REAL data

@@ -3181,3 +3181,952 @@ input, select, textarea {
         opacity: 1; /* Always show on mobile */
     }
 }
+
+
+/* Arrow Navigation System */
+.plans-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plans-header h2 {
+    margin: 0 !important;
+}
+
+.plans-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-arrow {
+    background: #3498db;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+.nav-arrow:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.plan-counter {
+    color: #2c3e50;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Active Plan Card */
+.progression-plan-card.active {
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* Exercise progression improvements */
+.exercise-progression-item {
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    margin-bottom: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.exercise-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.exercise-details {
+    color: #7f8c8d;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .plans-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .plans-navigation {
+        justify-content: center;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Progressive Overload Page Styles */
+.progressive-page-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    padding: 0;
+}
+
+.progressive-header-section {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.progressive-header-section h1 {
+    color: #2c3e50 !important;
+    margin: 0 0 8px 0;
+}
+
+.progressive-header-section p {
+    color: #7f8c8d !important;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.progressive-main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.progressive-sidebar {
+    width: 350px;
+    background: #f8f9fa;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.progressive-view-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.progressive-view-content {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+}
+
+/* Section Cards */
+.section-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.section-card h2 {
+    color: #2c3e50 !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.setup-step {
+    margin-bottom: 0;
+}
+
+.setup-step h3 {
+    color: #2c3e50 !important;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Workout and Day Lists */
+.workout-list, .day-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.workout-card, .day-card {
+    background: white !important;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.workout-card:hover, .day-card:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.workout-card h4, .day-card h4 {
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+.workout-card p, .day-card p {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.day-card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.day-icon {
+    font-size: 2rem;
+}
+
+.day-info h4 {
+    margin: 0 0 5px 0;
+}
+
+.day-info p {
+    margin: 0;
+}
+
+/* Exercise Configuration */
+.exercise-config {
+    background: white !important;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exercise-header h4 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.toggle-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.progression-settings {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.progression-settings p {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.info-box {
+    background: #e8f4fd;
+    border: 1px solid #b3d9ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Arrow Navigation System */
+.plans-header {
+    margin-bottom: 20px;
+}
+
+.plans-header h2 {
+    margin: 0 !important;
+    text-align: center;
+}
+
+.plans-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.nav-arrow {
+    background: #3498db;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+.plan-counter {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1em;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Active Plan Card */
+.progression-plan-card.active {
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    background: white;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.plan-header h4 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.plan-meta {
+    color: #7f8c8d;
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+/* Exercise progression improvements */
+.exercise-progression-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.exercise-progression-item {
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    text-align: center;
+}
+
+.exercise-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.exercise-details {
+    color: #7f8c8d;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.plan-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.plan-actions .action-btn {
+    flex: 1;
+    max-width: 120px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.modal-close:hover {
+    color: #2c3e50;
+}
+
+/* Utility Classes */
+.no-data {
+    color: #7f8c8d !important;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* Button Styles */
+.btn-secondary {
+    background: #95a5a6 !important;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d !important;
+}
+
+.btn-danger {
+    background: #e74c3c !important;
+}
+
+.btn-danger:hover {
+    background: #c0392b !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progressive-main-content {
+        flex-direction: column;
+    }
+    
+    .progressive-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .plan-actions {
+        flex-direction: column;
+    }
+    
+    .exercise-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .plans-navigation {
+        gap: 15px;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Arrow Navigation System - Fixed positioning */
+.plans-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.plans-header h2 {
+    margin: 0 !important;
+    text-align: center;
+}
+
+.plans-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-arrow {
+    background: #3498db;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+.plan-counter {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1em;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Progress Photos Section - Make it more prominent */
+.photos-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white;
+    border: none;
+}
+
+.photos-section h2 {
+    color: white !important;
+}
+
+.photos-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.photos-section .action-btn {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.photos-section .action-btn:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Header Section with Photos Button */
+.progressive-header-section {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.header-main h1 {
+    color: #2c3e50 !important;
+    margin: 0 0 8px 0;
+}
+
+.header-main p {
+    color: #7f8c8d !important;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Photos Header Button */
+.photos-header-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.photos-header-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.photos-header-btn .btn-icon {
+    font-size: 1.1em;
+}
+
+/* Progress Photos Modal - Fixed Colors */
+#photosModal .modal-content {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+#photosModal .modal-header {
+    background: white !important;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#photosModal .modal-header h3 {
+    color: #2c3e50 !important;
+}
+
+#photosModal .modal-body {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+/* Photos Toolbar */
+.photos-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+    background: white !important;
+}
+
+.photos-toolbar .action-btn {
+    background: #3498db !important;
+    color: white !important;
+    border: none;
+}
+
+.photos-toolbar .action-btn:hover {
+    background: #2980b9 !important;
+}
+
+/* Breadcrumb - Improved */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.breadcrumb-item {
+    padding: 4px 8px;
+    color: #2c3e50 !important;
+}
+
+.breadcrumb-item[style*="color: #3498db"] {
+    color: #3498db !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumb-item[style*="color: #3498db"]:hover {
+    color: #2980b9 !important;
+}
+
+.breadcrumb-item[style*="font-weight: bold"] {
+    color: #2c3e50 !important;
+    font-weight: 600;
+}
+
+/* Photos Container */
+.photos-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    height: calc(80vh - 150px);
+    overflow: hidden;
+    background: white !important;
+}
+
+.folders-section, .photos-section {
+    overflow-y: auto;
+    background: white !important;
+}
+
+.folders-section h4, .photos-section h4 {
+    color: #2c3e50 !important;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Folders Grid */
+.folders-grid, .photos-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #2c3e50 !important;
+}
+
+.folder-item:hover {
+    background: #e9ecef !important;
+    transform: translateY(-1px);
+    border-color: #3498db;
+}
+
+.folder-icon {
+    font-size: 1.5em;
+    margin-right: 12px;
+    color: #2c3e50 !important;
+}
+
+.folder-name {
+    flex: 1;
+    color: #2c3e50 !important;
+    font-weight: 500;
+}
+
+.folder-actions {
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.folder-item:hover .folder-actions {
+    opacity: 1;
+}
+
+/* Current Folder Highlight */
+.folder-item.current-folder {
+    background: #3498db !important;
+    border-color: #2980b9;
+    color: white !important;
+}
+
+.folder-item.current-folder .folder-icon,
+.folder-item.current-folder .folder-name {
+    color: white !important;
+}
+
+/* Photos Grid */
+.photo-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white !important;
+}
+
+.photo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: #3498db;
+}
+
+.photo-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1;
+}
+
+.icon-btn {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease;
+    color: #2c3e50 !important;
+}
+
+.icon-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* No Items State */
+.no-items {
+    text-align: center;
+    color: #7f8c8d !important;
+    padding: 40px 20px;
+    font-style: italic;
+    background: white !important;
+}
+
+/* Photo Actions */
+.photo-actions {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    background: white !important;
+}
+
+/* Create Folder Modal - Fixed Colors */
+#createFolderModal .modal-content,
+#photoViewerModal .modal-content,
+#editPlanModal .modal-content {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+#createFolderModal .modal-header,
+#photoViewerModal .modal-header,
+#editPlanModal .modal-header {
+    background: white !important;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#createFolderModal .modal-body,
+#photoViewerModal .modal-body,
+#editPlanModal .modal-body {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+/* Form Elements in Modals */
+.form-group label {
+    color: #2c3e50 !important;
+}
+
+.form-input {
+    background: white !important;
+    color: #2c3e50 !important;
+    border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .photos-toolbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .folder-actions {
+        opacity: 1; /* Always show on mobile */
+    }
+    
+    .breadcrumb {
+        font-size: 0.8em;
+        flex-wrap: wrap;
+    }
+}

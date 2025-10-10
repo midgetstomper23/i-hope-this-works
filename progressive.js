@@ -1,9 +1,11 @@
-// progressive.js - Updated with better layout and edit functionality
+// progressive.js - Updated with arrow navigation system
 
 let selectedWorkout = null;
 let selectedDay = null;
 let progressionSettings = {};
 let editingPlan = null;
+let activePlans = [];
+let currentPlanIndex = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Progressive Overload page loaded');
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('backToStep1')?.addEventListener('click', () => showStep(1));
     document.getElementById('backToStep2')?.addEventListener('click', () => showStep(2));
     document.getElementById('saveProgressionBtn')?.addEventListener('click', saveProgressionPlan);
-    document.getElementById('managePhotosBtn')?.addEventListener('click', openPhotosModal);
+    document.getElementById('photosHeaderBtn').addEventListener('click', openPhotosModal);
     document.getElementById('closePhotosModal')?.addEventListener('click', closePhotosModal);
     document.getElementById('closeEditModal')?.addEventListener('click', closeEditModal);
     
@@ -44,21 +46,46 @@ async function loadActivePlans() {
 
 function displayActivePlans(plans) {
     const container = document.getElementById('activePlans');
+    const navigation = document.getElementById('plansNavigation');
+    
+    activePlans = plans;
     
     if (!plans || plans.length === 0) {
         container.innerHTML = '<p class="no-data">No active progression plans. Create one below.</p>';
+        navigation.style.display = 'none';
         return;
     }
     
-    container.innerHTML = '';
+    // Show navigation if we have multiple plans
+    if (plans.length > 1) {
+        navigation.style.display = 'flex';
+        document.getElementById('totalPlans').textContent = plans.length;
+        
+        // Add event listeners for navigation
+        document.getElementById('prevPlan').addEventListener('click', showPreviousPlan);
+        document.getElementById('nextPlan').addEventListener('click', showNextPlan);
+    } else {
+        navigation.style.display = 'none';
+    }
     
-    plans.forEach(plan => {
-        const planCard = document.createElement('div');
-        planCard.className = 'progression-plan-card';
-        
-        const enabledExercises = Object.entries(plan.exercises).filter(([_, ex]) => ex.enabled);
-        
-        planCard.innerHTML = `
+    // Reset to first plan
+    currentPlanIndex = 0;
+    showCurrentPlan();
+}
+
+function showCurrentPlan() {
+    const container = document.getElementById('activePlans');
+    const plan = activePlans[currentPlanIndex];
+    
+    if (!plan) return;
+    
+    // Update navigation counter
+    document.getElementById('currentPlanIndex').textContent = currentPlanIndex + 1;
+    
+    const enabledExercises = Object.entries(plan.exercises).filter(([_, ex]) => ex.enabled);
+    
+    container.innerHTML = `
+        <div class="progression-plan-card active">
             <div class="plan-header">
                 <h4>${plan.workoutName} - ${plan.dayName}</h4>
                 <p class="plan-meta"><strong>Start Date:</strong> ${new Date(plan.startDate).toLocaleDateString()}</p>
@@ -72,6 +99,7 @@ function displayActivePlans(plans) {
                         <div class="exercise-details">
                             ${ex.variable} increases by ${ex.increaseAmount} every ${ex.intervalWeeks} weeks
                             <br><strong>Current:</strong> ${ex.currentValue} ${getVariableUnit(ex.variable)}
+                            ${ex.nextIncreaseDate ? `<br><strong>Next Increase:</strong> ${new Date(ex.nextIncreaseDate).toLocaleDateString()}` : ''}
                         </div>
                     </div>
                 `).join('')}
@@ -81,10 +109,22 @@ function displayActivePlans(plans) {
                 <button class="action-btn btn-secondary" onclick="editPlan('${plan.id}')">Edit Plan</button>
                 <button class="action-btn btn-danger" onclick="deletePlan('${plan.id}')">Delete Plan</button>
             </div>
-        `;
-        
-        container.appendChild(planCard);
-    });
+        </div>
+    `;
+}
+
+function showPreviousPlan() {
+    if (activePlans.length <= 1) return;
+    
+    currentPlanIndex = currentPlanIndex > 0 ? currentPlanIndex - 1 : activePlans.length - 1;
+    showCurrentPlan();
+}
+
+function showNextPlan() {
+    if (activePlans.length <= 1) return;
+    
+    currentPlanIndex = currentPlanIndex < activePlans.length - 1 ? currentPlanIndex + 1 : 0;
+    showCurrentPlan();
 }
 
 async function editPlan(planId) {
